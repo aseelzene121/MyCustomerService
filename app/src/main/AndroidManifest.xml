@@ -19,7 +19,6 @@
         <activity android:name=".Signup" />
         <activity android:name=".Coustemerservice" />
         <activity android:name=".OfficeControl"/>
-        <activity android:name=".ClientRequest"></activity>
     </application>
 
 </manifest>
