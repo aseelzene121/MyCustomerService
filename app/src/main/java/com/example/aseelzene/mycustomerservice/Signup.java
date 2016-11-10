@@ -21,6 +21,7 @@ public class Signup extends AppCompatActivity {
     private EditText etPassword;
     private EditText etConfirmPass;
     private FirebaseAuth auth;
+    private Button btnSignUp;
 
 
     @Override
@@ -31,7 +32,8 @@ public class Signup extends AppCompatActivity {
         etFullName = (EditText) findViewById(R.id.etFullName);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etConfirmPass = (EditText) findViewById(R.id.etConfirmPassword);
-        eventhandler();
+        btnSignUp =(Button) findViewById(R.id.btnSignUp);
+        eventHander();
      //  auth = FirebaseAuth.getInstance();
 
 
@@ -115,9 +117,9 @@ public class Signup extends AppCompatActivity {
 
         super.onStop();
 
-        if (authStateListener != null)
+        if (authStateListener != null);
 
-            auth.removeAuthStateListener(authStateListener);
+//            auth.removeAuthStateListener(authStateListener);
         //123
 
 
@@ -155,6 +157,17 @@ public class Signup extends AppCompatActivity {
 
             }
         });
+
+    }
+    public void eventHander(){
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Signup.this,LogIn.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 
@@ -163,4 +176,7 @@ public class Signup extends AppCompatActivity {
      //   super.onCreate(savedInstanceState);
        // setContentView(R.layout.activity_signup);
     }
+
+
+
 
