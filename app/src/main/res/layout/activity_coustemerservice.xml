@@ -15,7 +15,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:id="@+id/linearLayout"
-        android:background="#9496d5">
+        android:background="#9496d5"
+        android:weightSum="1">
 
         <EditText
             android:layout_width="wrap_content"
