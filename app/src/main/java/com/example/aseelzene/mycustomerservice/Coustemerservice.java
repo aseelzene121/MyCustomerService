@@ -26,8 +26,6 @@ public class Coustemerservice extends AppCompatActivity {
         etClasscode = (EditText) (findViewById(R.id.etClasscode));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
         eventHander();
-
-
     }
 
     private void dataHandler() {

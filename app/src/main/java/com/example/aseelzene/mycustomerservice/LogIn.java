@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LogIn extends AppCompatActivity {
     private EditText etEmail;
     private EditText etpassword;
-    private Button btnSignIn, btnNewAcount;
+    private Button btnSignIn;
     private Button btnSignup;
     private FirebaseAuth auth;
 
@@ -28,10 +28,9 @@ public class LogIn extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etpassword = (EditText) findViewById(R.id.etPassword);
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
-        btnNewAcount = (Button) findViewById(R.id.btnSignIn);
-        btnSignup = (Button) findViewById(R.id.btnSignUp);
-        eventHandler();
-//        auth = FirebaseAuth.getInstance();
+        btnSignup = (Button) findViewById(R.id.btnSignup);
+         eventHander();
+        // auth = FirebaseAuth.getInstance();
 
     }
 
@@ -81,31 +80,25 @@ public class LogIn extends AppCompatActivity {
 
     }
 
-
-    public void eventHandler() {
+    public void eventHander() {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dataHandler();
                 Intent i = new Intent(LogIn.this, ClientRequest.class);
-            }
-
-        });
-
-
-        btnNewAcount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LogIn.this, ClientRequest.class);
                 startActivity(i);
 
             }
 
-
         });
-        //**FirebaseAuth.getInstance().signOut();
 
+
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(LogIn.this,Signup.class);
+                startActivity(i);
+            }
+        });
     }
-
-
 }
