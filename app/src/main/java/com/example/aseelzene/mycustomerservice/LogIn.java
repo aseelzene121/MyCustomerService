@@ -31,7 +31,7 @@ public class LogIn extends AppCompatActivity {
         btnNewAcount = (Button) findViewById(R.id.btnSignIn);
         btnSignup = (Button) findViewById(R.id.btnSignUp);
         eventHandler();
-        auth = FirebaseAuth.getInstance();
+//        auth = FirebaseAuth.getInstance();
 
     }
 
