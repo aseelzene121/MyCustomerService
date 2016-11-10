@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyCustomerService</string>
+    <string name="Help">Help</string>
+    <string name="Location">Location</string>
+    <string name="btnclasscode">classcode</string>
+    <string name="classcode">btnclasscode</string>
+    <string name="Helpme">Helpme</string>
+    <string name="Classcode">Class code</string>
+    <string name="Back">Back</string>
+    <string name="SignUp">signup</string>
+    <string name="Signin">Signin</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="RePassword">RePassword</string>
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "536043430052",
+    "firebase_url": "https://aseelcustomerservice.firebaseio.com",
+    "project_id": "aseelcustomerservice",
+    "storage_bucket": "aseelcustomerservice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536043430052:android:8833c1f63a914a8d",
+        "android_client_info": {
+          "package_name": "com.example.aseelzene.mycustomerservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536043430052-gpku7rvfqvs58p0j1uur2lgkiqg7u688.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aseelzene.mycustomerservice",
+            "certificate_hash": "088658F3AA9B4EA104ABAB38F77983A6FB983B5C"
+          }
+        },
+        {
+          "client_id": "536043430052-om3d6d15e98m68c962u3nqlr8dbnh2ku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC6oTYwHvucv6WJAkJDCeiRW-fiJ8OdmY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536043430052-om3d6d15e98m68c962u3nqlr8dbnh2ku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
