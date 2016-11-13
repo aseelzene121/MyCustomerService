@@ -34,7 +34,7 @@ public class Signup extends AppCompatActivity {
         etConfirmPass = (EditText) findViewById(R.id.etConfirmPassword);
         btnSignUp =(Button) findViewById(R.id.btnSignUp);
         eventHander();
-     //  auth = FirebaseAuth.getInstance();
+       auth = FirebaseAuth.getInstance();
 
 
     }
@@ -119,7 +119,7 @@ public class Signup extends AppCompatActivity {
 
         if (authStateListener != null);
 
-//            auth.removeAuthStateListener(authStateListener);
+         auth.removeAuthStateListener(authStateListener);
         //123
 
 

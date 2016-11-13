@@ -25,13 +25,13 @@ public class LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-//        if (FirebaseAuth.getInstance().getCurrentUser()!=null)
+        if (FirebaseAuth.getInstance().getCurrentUser()!=null)
         etEmail = (EditText) findViewById(R.id.etEmail);
         etpassword = (EditText) findViewById(R.id.etPassword);
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
         btnSignup = (Button) findViewById(R.id.btnSignup);
          eventHander();
-        // auth = FirebaseAuth.getInstance();
+         auth = FirebaseAuth.getInstance();
 
     }
 
