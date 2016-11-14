@@ -33,8 +33,8 @@ public class Signup extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.etPassword);
         etConfirmPass = (EditText) findViewById(R.id.etConfirmPassword);
         btnSignUp =(Button) findViewById(R.id.btnSignUp);
-        eventHander();
        auth = FirebaseAuth.getInstance();
+        eventHandler();
 
 
     }
@@ -64,11 +64,9 @@ public class Signup extends AppCompatActivity {
         }
         if (isok)
             creatAcount(stEmail, stPassword);
-
     }
 
-    private void eventhandler() {
-    }
+
 
     private FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
 
@@ -102,6 +100,8 @@ public class Signup extends AppCompatActivity {
 
         }
     };
+
+
 
 
     @Override
@@ -159,7 +159,11 @@ public class Signup extends AppCompatActivity {
         });
 
     }
-    public void eventHander(){
+
+
+
+
+    public void eventHandler(){
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,14 +171,12 @@ public class Signup extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        dataHandler();
 
     }
 
 
- //   @Override
-   // protected void onCreate(Bundle savedInstanceState) {
-     //   super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_signup);
+
     }
 
 
