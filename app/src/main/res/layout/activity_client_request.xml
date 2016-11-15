@@ -11,26 +11,28 @@
     android:background="#46e4ec">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#2fbfa9">
+        android:background="#2fbfa9"
+        android:weightSum="1"
+        android:baselineAligned="false">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Location"
-            android:id="@+id/btnLocation"
-            android:layout_gravity="center_horizontal" />
-
-        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:src="@android:drawable/ic_menu_mylocation"
-            android:layout_gravity="center_horizontal" />
+            android:text="@string/Customer"
+            android:id="@+id/btnCustomer"
+            android:layout_gravity="center_vertical" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Server"
+            android:id="@+id/btnServer"
+            android:layout_gravity="center_vertical" />
+
     </LinearLayout>
 
 </RelativeLayout>

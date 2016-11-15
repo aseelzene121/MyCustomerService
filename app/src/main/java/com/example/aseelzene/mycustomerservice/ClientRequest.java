@@ -14,33 +14,46 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class ClientRequest extends AppCompatActivity {
-    private Button btnLocation;
+   private Button btnServer;
+    private Button btnCustomer;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_request);
-        btnLocation = (Button) findViewById(R.id.btnLocation);
+        btnCustomer= (Button) findViewById(R.id.btnCustomer);
+        btnServer = (Button) findViewById(R.id.btnServer);
         eventHandler();
 
     }
 
     private void eventHandler() {
-        btnLocation.setOnClickListener(new View.OnClickListener() {
-                                           @Override
-                                           public void onClick(View v) {
-                                               Intent i;
-                                               i = new Intent(ClientRequest.this, Coustemerservice.class);
-                                               startActivity(i);
+        btnCustomer.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View v) {
+                                             Intent i;
+                                             i = new Intent(ClientRequest.this, Coustemerservice.class);
+                                             startActivity(i);
 
 
-                                           }
+                                         }
 
-                                       }
+                                     }
+
+
         );
+        btnServer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i;
+                i = new Intent(ClientRequest.this,Signup.class);
+            }
+        });
     }
-}
+
+    }
+
 
 
 

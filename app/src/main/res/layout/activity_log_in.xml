@@ -42,8 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Signup"
-            android:id="@+id/btnSignup"
-            android:layout_gravity="right" />
+            android:id="@+id/btnSignup" />
 
     </LinearLayout>
 </RelativeLayout>

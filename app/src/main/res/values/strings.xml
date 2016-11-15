@@ -13,4 +13,6 @@
     <string name="Password">Password</string>
     <string name="RePassword">RePassword</string>
     <string name="Signup">Signup</string>
+    <string name="Customer">cutomer</string>
+    <string name="Server">Server</string>
 </resources>
