@@ -18,6 +18,23 @@
         android:weightSum="1">
 
         <EditText
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/etName" />
+
+        <Button
+            android:layout_width="72dp"
+            android:layout_height="89dp"
+            android:text="@string/Helpme"
+            android:id="@+id/btnHelpme"
+            android:background="#ca2121"
+            android:onClick="onClick"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -25,14 +42,6 @@
             android:id="@+id/etClasscode"
             android:text="Classcode"
             android:hint="Classcode" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Helpme"
-            android:id="@+id/btnHelpme"
-            android:background="#ca2121"
-            android:onClick="onClick" />
 
     </LinearLayout>
 

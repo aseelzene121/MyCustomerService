@@ -1,4 +1,4 @@
-package com.example.aseelzene.mycustomerservice;
+package com.example.aseelzene.mycustomerservice.data;
 
 /**
  * Created by user on 11/15/2016.
