@@ -86,8 +86,7 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dataHandler();
-                Intent i = new Intent(LogIn.this, ClientRequest.class);
-                startActivity(i);
+
 
             }
 

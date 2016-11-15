@@ -167,11 +167,11 @@ public class Signup extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Signup.this,LogIn.class);
-                startActivity(i);
+                dataHandler();
+
+
             }
         });
-        dataHandler();
 
     }
 
