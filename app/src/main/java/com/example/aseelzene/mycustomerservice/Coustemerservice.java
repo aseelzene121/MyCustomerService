@@ -49,14 +49,7 @@ public class Coustemerservice extends AppCompatActivity {
     private void etClasscode(String stCode, String stEmail) {
     }
     private void eventHander() {
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i;
-                i = new Intent(Coustemerservice.this, ClientRequest.class);
 
-            }
-        });
         btnHelpme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

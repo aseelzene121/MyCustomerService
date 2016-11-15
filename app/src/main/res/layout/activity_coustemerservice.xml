@@ -45,15 +45,4 @@
 
     </LinearLayout>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="@string/Back"
-        android:id="@+id/btnBack"
-        android:layout_gravity="left|center|top"
-        android:background="#065af4"
-        android:layout_alignRight="@+id/linearLayout"
-        android:layout_alignEnd="@+id/linearLayout" />
-
 </RelativeLayout>
