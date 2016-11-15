@@ -13,7 +13,6 @@ import org.w3c.dom.Text;
 
 public class Coustemerservice extends AppCompatActivity {
     private Button btnHelpme;
-    private Button btnBack;
     private EditText etClasscode;
     private EditText etEmail;
 
@@ -21,7 +20,6 @@ public class Coustemerservice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coustemerservice);
-        btnBack = (Button) (findViewById(R.id.btnBack));
         etEmail = (EditText) (findViewById(R.id.etEmail));
         etClasscode = (EditText) (findViewById(R.id.etClasscode));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
