@@ -52,7 +52,7 @@ public class Coustemerservice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(Coustemerservice.this, OfficeControl.class);
+                i = new Intent(Coustemerservice.this, MyTask.class);
                 startActivity(i);
             }
         });

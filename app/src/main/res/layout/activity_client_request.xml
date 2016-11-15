@@ -24,10 +24,10 @@
             android:layout_height="wrap_content"
             android:text="@string/Customer"
             android:id="@+id/btnCustomer"
-            android:layout_gravity="center_vertical" />
+            android:layout_weight="1.01" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="109dp"
             android:layout_height="wrap_content"
             android:text="@string/Server"
             android:id="@+id/btnServer"
