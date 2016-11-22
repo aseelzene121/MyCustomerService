@@ -94,10 +94,7 @@ public class Signup extends AppCompatActivity {
                 //user signed out
 
                 Toast.makeText(Signup.this, "user signed out.", Toast.LENGTH_SHORT).show();
-
-
             }
-
         }
     };
 
@@ -152,16 +149,10 @@ public class Signup extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
 
                     task.getException().printStackTrace();
-
                 }
-
             }
         });
-
     }
-
-
-
 
     public void eventHandler(){
         btnSignUp.setOnClickListener(new View.OnClickListener() {

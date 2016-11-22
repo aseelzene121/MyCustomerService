@@ -54,7 +54,7 @@ public class Coustemerservice extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i;
                 i = new Intent(Coustemerservice.this, MyTask.class);
-                startActivity(i);
+//                startActivity(i);
             }
         });
     }

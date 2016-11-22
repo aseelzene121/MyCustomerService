@@ -40,8 +40,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/etClasscode"
-            android:text="Classcode"
-            android:hint="Classcode" />
+            android:hint="Zone Code" />
 
     </LinearLayout>
 

@@ -16,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ClientRequest extends AppCompatActivity {
    private Button btnServer;
     private Button btnCustomer;
+    private Button btnSignUp;
+    private Button btnSignIn;
 
 
     @Override
@@ -23,6 +25,8 @@ public class ClientRequest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_request);
         btnCustomer= (Button) findViewById(R.id.btnCustomer);
+        btnSignUp= (Button) findViewById(R.id.btnSignUp);
+        btnSignIn=(Button) findViewById(R.id.btnSignIn);
         btnServer = (Button) findViewById(R.id.btnServer);
         eventHandler();
 
@@ -30,29 +34,42 @@ public class ClientRequest extends AppCompatActivity {
 
     private void eventHandler() {
         btnCustomer.setOnClickListener(new View.OnClickListener() {
-                                         @Override
-                                         public void onClick(View v) {
-                                             Intent i;
-                                             i = new Intent(ClientRequest.this, Coustemerservice.class);
-                                             startActivity(i);
-
-
-                                         }
-
-                                     }
-
-
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(ClientRequest.this, Coustemerservice.class);
+                startActivity(i);
+            }
+        }
         );
         btnServer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i;
                 i = new Intent(ClientRequest.this,Signup.class);
+                startActivity(i);
             }
         });
-    }
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i;
+                i=new Intent(ClientRequest.this,LogIn.class);
+                startActivity(i);
+            }
+        });
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i;
+                i=new Intent(ClientRequest.this,Signup.class);
+                startActivity(i);
+            }
+        });
 
     }
+    }
+
 
 
 

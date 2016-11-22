@@ -31,7 +31,11 @@ public class LogIn extends AppCompatActivity {
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
         btnSignup = (Button) findViewById(R.id.btnSignup);
          eventHander();
+/// Updated upstream
         auth = FirebaseAuth.getInstance();
+
+//        auth = FirebaseAuth.getInstance();
+// Stashed changes
 
     }
 
@@ -101,6 +105,6 @@ public class LogIn extends AppCompatActivity {
             }
         });
     }
-    public void111
+
 }
 
