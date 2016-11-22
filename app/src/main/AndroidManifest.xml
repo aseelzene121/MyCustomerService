@@ -16,8 +16,6 @@
 
         </activity>
 
-        <activity android:name=".LogIn" />
-
         <activity android:name=".Signup" />
         <activity android:name=".Coustemerservice" />
     </application>

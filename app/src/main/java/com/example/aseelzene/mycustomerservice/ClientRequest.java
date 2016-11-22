@@ -1,13 +1,19 @@
 package com.example.aseelzene.mycustomerservice;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.ClientCertRequest;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.aseelzene.mycustomerservice.data.MyTask;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,17 +23,23 @@ public class ClientRequest extends AppCompatActivity {
    private Button btnServer;
     private Button btnCustomer;
     private Button btnSignUp;
-    private Button btnSignIn;
+    private Button btnSignin;
+    private EditText etEmail;
+    private EditText etPassw;
+    private FirebaseAuth auth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_request);
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etPassw = (EditText) findViewById(R.id.etPassw);
         btnCustomer= (Button) findViewById(R.id.btnCustomer);
         btnSignUp= (Button) findViewById(R.id.btnSignUp);
-        btnSignIn=(Button) findViewById(R.id.btnSignIn);
+        btnSignin=(Button) findViewById(R.id.btnSignin);
         btnServer = (Button) findViewById(R.id.btnServer);
+        auth = FirebaseAuth.getInstance();
         eventHandler();
 
     }
@@ -40,22 +52,22 @@ public class ClientRequest extends AppCompatActivity {
                 i = new Intent(ClientRequest.this, Coustemerservice.class);
                 startActivity(i);
             }
-        }
-        );
+        });
         btnServer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i;
-                i = new Intent(ClientRequest.this,Signup.class);
+                i = new Intent(ClientRequest.this, MyTask.class);
                 startActivity(i);
             }
         });
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+        btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i;
-                i=new Intent(ClientRequest.this,LogIn.class);
-                startActivity(i);
+//                Intent i;
+//                i=new Intent(ClientRequest.this,MyTask.class);
+//                startActivity(i);
+                dataHandler();
             }
         });
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +76,44 @@ public class ClientRequest extends AppCompatActivity {
                 Intent i;
                 i=new Intent(ClientRequest.this,Signup.class);
                 startActivity(i);
+            }
+        });
+
+    }
+    private void dataHandler() {
+        //1.getting data
+        String stEmail = etEmail.getText().toString();
+        String stPassword = etPassw.getText().toString();
+        boolean isOk = true;
+        //2.checking
+        if (stEmail.length() < 3) {
+            etEmail.setError("Worng Email");
+            isOk = false;
+        }
+        if (stPassword.length() < 3) {
+            etPassw.setError("Wrong Password");
+            isOk = false;
+        }
+        if (isOk)
+            signin(stEmail, stPassword);
+
+
+    }
+
+    private void signin(String email, String passw) {
+        auth.signInWithEmailAndPassword(email, passw).addOnCompleteListener(ClientRequest.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(ClientRequest.this,Coustemerservice.class);
+                    startActivity(i);
+                    finish();
+
+                } else {
+                    Toast.makeText(ClientRequest.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    task.getException().printStackTrace();
+                }
             }
         });
 

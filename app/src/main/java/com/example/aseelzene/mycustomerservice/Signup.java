@@ -21,7 +21,7 @@ public class Signup extends AppCompatActivity {
     private EditText etPassword;
     private EditText etConfirmPass;
     private FirebaseAuth auth;
-    private Button btnSignUp;
+    private Button btnSave;
 
 
     @Override
@@ -32,7 +32,7 @@ public class Signup extends AppCompatActivity {
         etFullName = (EditText) findViewById(R.id.etFullName);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etConfirmPass = (EditText) findViewById(R.id.etConfirmPassword);
-        btnSignUp =(Button) findViewById(R.id.btnSignUp);
+        btnSave =(Button) findViewById(R.id.btnSave);
        auth = FirebaseAuth.getInstance();
         eventHandler();
 
@@ -155,7 +155,7 @@ public class Signup extends AppCompatActivity {
     }
 
     public void eventHandler(){
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dataHandler();

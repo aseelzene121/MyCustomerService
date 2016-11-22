@@ -16,4 +16,5 @@
     <string name="Customer">cutomer</string>
     <string name="Server">Server</string>
     <string name="ZoneCode">zonecode</string>
+    <string name="Save">Save</string>
 </resources>
