@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.Signup"
     android:accessibilityLiveRegion="assertive"
-    android:background="#46e4ec">
+    android:background="#fef109">
 
     <LinearLayout
         android:orientation="vertical"
@@ -55,14 +55,16 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/etZoneCode"
-            android:hint="Zone Code" />
+            android:hint="Zone Code"
+            android:autoText="false" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Save"
             android:id="@+id/btnSave"
-            android:layout_gravity="right" />
+            android:layout_gravity="right"
+            android:background="#22ee48" />
 
     </LinearLayout>
 </RelativeLayout>

@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.ClientRequest"
-    android:background="#46e4ec">
+    android:background="#bef722">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,15 +25,17 @@
             android:layout_height="130dp"
             android:text="@string/Customer"
             android:id="@+id/btnCustomer"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#0c0d0c"
+            android:background="#3fd35f" />
 
         <Button
-            android:layout_width="235dp"
-            android:layout_height="60dp"
+            android:layout_width="244dp"
+            android:layout_height="134dp"
             android:text="@string/Server"
             android:id="@+id/btnServer"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.37" />
+            android:background="#bd6d6d"
+            android:layout_gravity="center_horizontal" />
 
         <EditText
             android:layout_width="match_parent"
@@ -49,17 +51,29 @@
             android:id="@+id/etPassw"
             android:hint="Password" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Signin"
-            android:id="@+id/btnSignin" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:id="@+id/btnSignUp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Signin"
+                android:id="@+id/btnSignin"
+                android:background="#bd6d6d"
+                android:layout_weight="1"
+                android:layout_gravity="bottom" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:id="@+id/btnSignUp"
+                android:background="#bd6d6d"
+                android:layout_weight="1"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
 
     </LinearLayout>
 
