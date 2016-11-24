@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
         android:background="#def913"
         android:weightSum="1">
@@ -45,5 +45,16 @@
             android:background="#ff8a42" />
 
     </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:editable="true" />
 
 </RelativeLayout>

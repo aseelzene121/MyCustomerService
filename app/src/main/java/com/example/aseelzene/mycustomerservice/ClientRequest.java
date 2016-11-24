@@ -5,19 +5,15 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.ClientCertRequest;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.aseelzene.mycustomerservice.data.MyTask;
+import com.example.aseelzene.mycustomerservice.data.Request;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class ClientRequest extends AppCompatActivity {
    private Button btnServer;
@@ -57,7 +53,7 @@ public class ClientRequest extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i;
-                i = new Intent(ClientRequest.this, MyTask.class);
+                i = new Intent(ClientRequest.this, Request.class);
                 startActivity(i);
             }
         });
@@ -65,7 +61,7 @@ public class ClientRequest extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                Intent i;
-//                i=new Intent(ClientRequest.this,MyTask.class);
+//                i=new Intent(ClientRequest.this,Request.class);
 //                startActivity(i);
                 dataHandler();
             }

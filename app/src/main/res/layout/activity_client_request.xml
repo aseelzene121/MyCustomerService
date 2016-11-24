@@ -15,7 +15,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#f5f0ee#8d25c9"
         android:weightSum="1"
         android:baselineAligned="false"
         android:orientation="vertical">

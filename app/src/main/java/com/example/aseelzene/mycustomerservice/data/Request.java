@@ -5,19 +5,19 @@ import com.example.aseelzene.mycustomerservice.Signup;
 /**
  * Created by user on 11/15/2016.
  */
-public class MyTask {
+public class Request {
     private String ZoneCode;
     private String Name;
     private String Status;
     private  boolean isCompleted;
 
-    public MyTask(String ZoneCode, String Name, String Status) {
+    public Request(String ZoneCode, String Name, String Status) {
         this.ZoneCode = ZoneCode;
         this.Name = Name;
         this.Status = Status;
         this.isCompleted=isCompleted();
     }
-    public MyTask()
+    public Request()
     {
 
     }
@@ -52,7 +52,7 @@ public class MyTask {
 
     @Override
     public String toString() {
-        return "MyTask{" +
+        return "Request{" +
                 "ZoneCode='" + ZoneCode + '\'' +
                 ", Name='" + Name + '\'' +
                 ", status=" + Status +
