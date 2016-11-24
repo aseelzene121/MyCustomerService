@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Wait"
-            android:id="@+id/tvWait"
+            android:id="@+id/rdWait"
             android:checked="false" />
 
         <RadioButton
@@ -32,12 +32,14 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/radioButton3" />
+            android:text="Finished"
+            android:id="@+id/rdFinished"
+            android:checked="false" />
 
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingBar" />
+            android:id="@+id/ratingBar"
+            android:numStars="5" />
     </LinearLayout>
 </RelativeLayout>
