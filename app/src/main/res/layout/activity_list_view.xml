@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.ListView"
-    android:background="#ff882c">
+    android:background="#def913">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,14 +18,16 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/radioButton" />
+            android:text="Wait"
+            android:id="@+id/tvWait"
+            android:checked="false" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
-            android:id="@+id/radioButton2" />
+            android:id="@+id/radioButton2"
+            android:checked="false" />
 
         <RadioButton
             android:layout_width="wrap_content"

@@ -8,14 +8,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.ClientRequest"
-    android:background="#ff882c">
+    android:background="#def913">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#ff882c"
+        android:background="#f5f0ee#8d25c9"
         android:weightSum="1"
         android:baselineAligned="false"
         android:orientation="vertical">
@@ -34,7 +34,7 @@
             android:layout_height="134dp"
             android:text="@string/Server"
             android:id="@+id/btnServer"
-            android:background="#54d04d"
+            android:background="#ff8a42"
             android:layout_gravity="center_horizontal" />
 
         <EditText
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/etEmail"
             android:hint="Email"
-            android:background="#ff8a42" />
+            android:background="#54d04d" />
 
         <EditText
             android:layout_width="match_parent"
@@ -51,12 +51,14 @@
             android:ems="10"
             android:id="@+id/etPassw"
             android:hint="Password"
-            android:background="#54d04d" />
+            android:background="#ff8a42"
+            android:autoText="false" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#def913">
 
             <Button
                 android:layout_width="0dp"
@@ -72,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
                 android:id="@+id/btnSignUp"
-                android:background="#54d04d"
+                android:background="#ff8a42"
                 android:layout_weight="1"
                 android:layout_gravity="bottom" />
         </LinearLayout>
