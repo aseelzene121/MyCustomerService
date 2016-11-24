@@ -23,7 +23,8 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etName"
-            android:hint="Name" />
+            android:hint="Name"
+            android:background="#54d04d" />
 
         <Button
             android:layout_width="72dp"
@@ -40,7 +41,8 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/etClasscode"
-            android:hint="Zone Code" />
+            android:hint="Zone Code"
+            android:background="#ff8a42" />
 
     </LinearLayout>
 

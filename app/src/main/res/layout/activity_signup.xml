@@ -12,10 +12,10 @@
     android:background="#ff882c">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ff882c">
+        android:background="#ff882c"
+        android:orientation="vertical">
 
         <EditText
             android:layout_width="match_parent"
@@ -32,7 +32,8 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etFullName"
-            android:hint="Name" />
+            android:hint="Name"
+            android:background="#ff8a42" />
 
         <EditText
             android:layout_width="match_parent"
@@ -49,7 +50,8 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etConfirmPassword"
-            android:hint="RePassword" />
+            android:hint="RePassword"
+            android:background="#ff8a42" />
 
         <EditText
             android:layout_width="match_parent"
@@ -61,13 +63,18 @@
             android:autoText="false"
             android:background="#54d04d" />
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="151dp"></LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Save"
             android:id="@+id/btnSave"
-            android:layout_gravity="right"
-            android:background="#54d04d" />
+            android:background="#54d04d"
+            android:layout_gravity="right" />
 
     </LinearLayout>
 </RelativeLayout>

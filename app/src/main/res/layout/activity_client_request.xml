@@ -21,7 +21,7 @@
         android:orientation="vertical">
 
         <Button
-            android:layout_width="300dp"
+            android:layout_width="307dp"
             android:layout_height="130dp"
             android:text="@string/Customer"
             android:id="@+id/btnCustomer"
@@ -30,7 +30,7 @@
             android:background="#54d04d" />
 
         <Button
-            android:layout_width="296dp"
+            android:layout_width="307dp"
             android:layout_height="134dp"
             android:text="@string/Server"
             android:id="@+id/btnServer"
@@ -41,7 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etEmail"
-            android:hint="Email" />
+            android:hint="Email"
+            android:background="#ff8a42" />
 
         <EditText
             android:layout_width="match_parent"
@@ -49,7 +50,8 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassw"
-            android:hint="Password" />
+            android:hint="Password"
+            android:background="#54d04d" />
 
         <LinearLayout
             android:orientation="horizontal"
