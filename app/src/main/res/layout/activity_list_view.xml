@@ -25,15 +25,15 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/radioButton2"
+            android:text="On My Way"
+            android:id="@+id/rdOnMyWay"
             android:checked="false" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Finished"
-            android:id="@+id/rdFinished"
+            android:text="@string/Done"
+            android:id="@+id/rdDone"
             android:checked="false" />
 
         <RatingBar

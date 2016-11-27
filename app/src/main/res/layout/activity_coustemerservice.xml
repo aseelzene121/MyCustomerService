@@ -26,15 +26,6 @@
             android:hint="Name"
             android:background="#54d04d" />
 
-        <Button
-            android:layout_width="72dp"
-            android:layout_height="89dp"
-            android:text="@string/Helpme"
-            android:id="@+id/btnHelpme"
-            android:background="#ca2121"
-            android:onClick="onClick"
-            android:layout_gravity="center_vertical" />
-
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,5 +47,49 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:editable="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/OnMyWay"
+        android:id="@+id/rdOnMyWay"
+        android:layout_marginTop="40dp"
+        android:layout_alignTop="@+id/rdWait"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Wait"
+        android:id="@+id/rdWait"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:id="@+id/rdDone"
+        android:checked="false"
+        android:layout_below="@+id/rdOnMyWay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="72dp"
+        android:layout_height="89dp"
+        android:text="@string/Helpme"
+        android:id="@+id/btnHelpme"
+        android:background="#ca2121"
+        android:onClick="onClick"
+        android:layout_gravity="center_vertical"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

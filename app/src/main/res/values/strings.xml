@@ -17,4 +17,7 @@
     <string name="Server">Server</string>
     <string name="ZoneCode">zonecode</string>
     <string name="Save">Save</string>
+    <string name="Wait">Wait</string>
+    <string name="OnMyWay">OnMyWay</string>
+    <string name="Done">Done</string>
 </resources>
