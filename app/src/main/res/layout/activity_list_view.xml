@@ -39,7 +39,15 @@
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingBar"
+            android:id="@+id/rbPriority"
             android:numStars="5" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/cbCheck"
+            android:layout_gravity="right"
+            android:checked="false" />
     </LinearLayout>
 </RelativeLayout>

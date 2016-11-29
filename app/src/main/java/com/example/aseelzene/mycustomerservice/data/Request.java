@@ -6,15 +6,18 @@ import com.example.aseelzene.mycustomerservice.Signup;
  * Created by user on 11/15/2016.
  */
 public class Request {
+    private String id;
     private String ZoneCode;
-    private String Name;
+    private String Finish;
     private String Status;
+    private float priority;
     private  boolean isCompleted;
 
-    public Request(String ZoneCode, String Name, String Status) {
+    public Request(String ZoneCode, String Finish, String Status, int priority) {
         this.ZoneCode = ZoneCode;
-        this.Name = Name;
+        this.Finish = Finish;
         this.Status = Status;
+        this.priority = priority;
         this.isCompleted=isCompleted();
     }
     public Request()
@@ -26,20 +29,32 @@ public class Request {
     }
     public void setIsCompleted(boolean isCompleted){this.isCompleted=isCompleted;}
 
+    public  String getId(){
+        return id;
+    }
+    public void setId(String id){
+        this.id=id;
+    }
+
     public String getZoneCode() {
         return ZoneCode;
     }
-
-    public void setId(String ZoneCode) {
+    public void setZoneCode(){
         this.ZoneCode=ZoneCode;
     }
 
-    public String getName() {
-        return Name;
+    public String  getFinish() {
+        return Finish;
     }
 
-    public void setName(String Name) {
-        this.Name=Name;
+    public void setName(String Finish) {
+        this.Finish=Finish;
+    }
+    public float getPriority() {
+        return priority;
+    }
+    public void setPriority(float priority) {
+        this.priority = priority;
     }
 
     public String getStatus() {
@@ -54,8 +69,9 @@ public class Request {
     public String toString() {
         return "Request{" +
                 "ZoneCode='" + ZoneCode + '\'' +
-                ", Name='" + Name + '\'' +
+                ", Name='" + Finish + '\'' +
                 ", status=" + Status +
+                ", priority=" + priority +
                 '}';
     }
     public boolean setIsCompleted(){
