@@ -39,20 +39,23 @@ public class ListView extends AppCompatActivity {
 
     private void initListView() {
         String email =FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.','_');
-        DatabaseReference reference= FirebaseDatabase.getInstance().getReference(email);
+        final DatabaseReference reference= FirebaseDatabase.getInstance().getReference(email);
         reference.child("Request").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 adapter.clear();
-                for (DatabaseReference ds:dataSnapshot.getChildren())
-
+                for (DataSnapshot ds:dataSnapshot.getChildren())
+                {
+                  Request request =ds.getValue(Request.class);
+                    request.setId(ds.getKey());
+                }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        })
+        });
     }
 
     public void setadapter(MyAdapter adapter) {
