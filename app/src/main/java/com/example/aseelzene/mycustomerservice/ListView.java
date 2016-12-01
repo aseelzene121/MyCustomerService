@@ -21,7 +21,7 @@ public class ListView extends AppCompatActivity {
     private Button rdDone;
     private Button rdOnMyWay;
     private MyAdapter adapter;
-    private ListView listview;
+    private ListView ivTasks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class ListView extends AppCompatActivity {
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
-        listview.setadapter(adapter);
+//        ivTasks.setadapter(adapter);
         initListView();
 
     }
