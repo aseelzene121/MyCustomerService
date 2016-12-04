@@ -32,7 +32,7 @@ public class ListView extends AppCompatActivity {
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
-        ivTasks.setadapter(adapter);
+//        ivTasks.setadapter(adapter);
         initListView();
 
     }

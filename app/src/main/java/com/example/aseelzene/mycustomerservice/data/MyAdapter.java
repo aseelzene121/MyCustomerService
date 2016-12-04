@@ -50,7 +50,7 @@ public class MyAdapter extends android.widget.ArrayAdapter {
                             Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
                             // delete from this adapter
                             remove(request);
-                            setNotifyOnChange(true);//to update
+                            setNotifyOnChange(true);//to update the list
                         }
                     }
                 });
