@@ -15,41 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wait"
-            android:id="@+id/rdWait"
-            android:checked="false" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="On My Way"
-            android:id="@+id/rdOnMyWay"
-            android:checked="false" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Done"
-            android:id="@+id/rdDone"
-            android:checked="false" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Done"
-            android:id="@+id/cbCheck"
-            android:layout_gravity="right"
-            android:checked="false" />
-
-        <RatingBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rbPriority"
-            android:numStars="5" />
-
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
