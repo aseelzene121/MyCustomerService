@@ -17,7 +17,7 @@ public class Request {
     private String adapter;
     private  boolean isCompleted;
 
-    public Request(String Wait, String Done, String OnMyWay , int priority, String id, String adapter) {
+       public Request(String Wait, String Done, String OnMyWay , int priority, String id, String adapter, Float  Priority) {
         this.Wait = Wait;
         this.OnMyWay = OnMyWay;
         this. Done= Done;
@@ -26,10 +26,8 @@ public class Request {
         this.id = id;
         this. adapter =  adapter;
     }
-    public Request()
-    {
 
-    }
+
     public boolean isCompleted() {
         return isCompleted;
     }
@@ -50,29 +48,26 @@ public class Request {
      public String getDone(){
          return Done;
      }
-    public void setDone(){
+    public void setDone(String Done){
         this.Done=Done;
     }
     public String getOnMyWay(){
         return OnMyWay;
     }
-    public void setOnMyWay(){
+    public void setOnMyWay(String OnMyWay){
         this.OnMyWay= OnMyWay;
     }
     public int getPriority(){
         return Priority;
     }
-    public void setPriority(){
+    public void setPriority(Float priority){
         this.Priority=Priority;
     }
     public String getadapter(){
         return adapter;
     }
-    public void setadapter(){
+    public void setadapter(String adapter){
         this.adapter=adapter;
-    }
-    public void setPriority(float stPriority){
-        this.Priority=Priority;
     }
 
 
@@ -84,6 +79,7 @@ public class Request {
                 ", Wait=" + Wait +
                 ", id=" +id +
                 ",Priority="+Priority+
+                ",ada[ter="+adapter+
                 '}';
     }
     public boolean setIsCompleted(){

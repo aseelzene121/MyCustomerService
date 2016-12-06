@@ -34,10 +34,15 @@ public class ListView extends AppCompatActivity {
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
+        ivTasks.adapter(adapter);
         initListView();
-
+        
 
     }
+
+    private void adapter(MyAdapter adapter) {
+    }
+
     private void initListView() {
         String email =FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.','_');
         final DatabaseReference reference= FirebaseDatabase.getInstance().getReference(email);
@@ -58,7 +63,7 @@ public class ListView extends AppCompatActivity {
             }
         });
     }
-
+    
     @Override
  protected void onStart(){
         super.onStart();
