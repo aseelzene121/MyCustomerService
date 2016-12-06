@@ -39,36 +39,38 @@ public class AddTasks extends AppCompatActivity {
     private void dataHandler() {
         float stPriority = rbPriority.getRating();
         boolean isOK = true;
-        if (isOK)
-        {
-            //
-        }
+        if (isOK) {
+            //isOk
+            Request request = new Request();
+            request.setPriority(stPriority);
+            request.setDone();
 
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-        email = email.replace(".", "_");
-        //all my task will be under my email under the root MyTasks
-        //child can not contain chars: $,#,.,...
-        // MyTask m = new MyTask();
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+            String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+            email = email.replace(".", "_");
+            //all my task will be under my email under the root MyTasks
+            //child can not contain chars: $,#,.,...
+            // MyTask m = new MyTask();
 
-        reference.child(email).child("request").push().setValue(Request, new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+            reference.child(email).child("request").push().setValue(request, new DatabaseReference.CompletionListener() {
+                @Override
+                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
 
-                if (databaseError == null) {
-                    Toast.makeText(getBaseContext(), "save ok", Toast.LENGTH_LONG).show();
-                    finish();// finish an exit this activity
+                    if (databaseError == null) {
+                        Toast.makeText(getBaseContext(), "save ok", Toast.LENGTH_LONG).show();
+                        finish();// finish an exit this activity
 
-                } else {
-                    Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
-                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-                    //reference.setValue("hello aseel");}
+                    } else {
+                        Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+                        //reference.setValue("hello aseel");}
+                    }
                 }
-            }
 
 
-        });
+            });
+        }
     }
 
 

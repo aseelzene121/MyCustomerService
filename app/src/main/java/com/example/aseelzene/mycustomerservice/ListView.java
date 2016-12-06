@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.aseelzene.mycustomerservice.data.MyAdapter;
 import com.example.aseelzene.mycustomerservice.data.Request;
@@ -32,11 +34,10 @@ public class ListView extends AppCompatActivity {
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
-//        ivTasks.setadapter(adapter);
         initListView();
 
-    }
 
+    }
     private void initListView() {
         String email =FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.','_');
         final DatabaseReference reference= FirebaseDatabase.getInstance().getReference(email);
@@ -58,9 +59,6 @@ public class ListView extends AppCompatActivity {
         });
     }
 
-    public void setadapter(MyAdapter adapter) {
-        this.adapter = adapter;
-    }
     @Override
  protected void onStart(){
         super.onStart();
