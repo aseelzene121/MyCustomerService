@@ -11,22 +11,24 @@ import com.example.aseelzene.mycustomerservice.Signup;
 public class Request {
     private String Wait;
     private String Done;
-    private String OnMyWay;
+    private String onMyWay;
     private int Priority;
     private  String id;
     private String adapter;
     private  boolean isCompleted;
 
-       public Request(String Wait, String Done, String OnMyWay , int priority, String id, String adapter, Float  Priority) {
-        this.Wait = Wait;
-        this.OnMyWay = OnMyWay;
-        this. Done= Done;
-        this.Priority = priority;
+    public Request(String Wait, String Done, String onMyWay, int priority, String id, String adapter){
+        this.Wait=Wait;
+        this.Done=Done;
+        this.onMyWay=onMyWay;
+        this.Priority=priority;
+        this.id=id;
         this.isCompleted=isCompleted();
-        this.id = id;
-        this. adapter =  adapter;
     }
+    public Request()
+    {
 
+    }
 
     public boolean isCompleted() {
         return isCompleted;
@@ -52,10 +54,10 @@ public class Request {
         this.Done=Done;
     }
     public String getOnMyWay(){
-        return OnMyWay;
+        return onMyWay;
     }
     public void setOnMyWay(String OnMyWay){
-        this.OnMyWay= OnMyWay;
+        this.onMyWay= OnMyWay;
     }
     public int getPriority(){
         return Priority;
@@ -75,7 +77,7 @@ public class Request {
     public String toString() {
         return "Request{" +
                 "Done='" + Done + '\'' +
-                ", OnMyWay='" +OnMyWay + '\'' +
+                ", onMyWay='" +onMyWay + '\'' +
                 ", Wait=" + Wait +
                 ", id=" +id +
                 ",Priority="+Priority+

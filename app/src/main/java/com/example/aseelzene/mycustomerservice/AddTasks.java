@@ -33,20 +33,20 @@ public class AddTasks extends AppCompatActivity {
         rdWait = (RadioButton) findViewById(R.id.rdWait);
         rdOnMyWay = (RadioButton) findViewById(R.id.rdOnMyWay);
         rbPriority = (RatingBar) findViewById(R.id.rbPriority);
-        eventhander();
+       
     }
 
     private void dataHandler() {
+        boolean isOk = true;
         float stPriority = rbPriority.getRating();
         boolean isOK = true;
-        if (isOK) {
+        if (isOK)
+        {
             //isOk
             Request request = new Request();
             request.setPriority(stPriority);
-            request.setDone();
-
-
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+            //get current user email
             String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
             email = email.replace(".", "_");
             //all my task will be under my email under the root MyTasks
@@ -64,7 +64,7 @@ public class AddTasks extends AppCompatActivity {
                     } else {
                         Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-                        //reference.setValue("hello aseel");}
+                        //reference.setValue;}
                     }
                 }
 
@@ -72,35 +72,9 @@ public class AddTasks extends AppCompatActivity {
             });
         }
     }
-
-
-    public void eventhander() {
-        rdOnMyWay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-            }
-        });
-        rdWait.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dataHandler();
-
-            }
-        });
-
-
-        rdDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-    }
-
-
-
 }
+
+
+
 
 

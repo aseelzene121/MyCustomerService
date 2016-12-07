@@ -22,7 +22,6 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 public class MyAdapter extends android.widget.ArrayAdapter {
     private DatabaseReference reference;
-
     public MyAdapter(Context context, int resource) {
         super(context, resource);
         String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
