@@ -20,4 +20,5 @@
     <string name="Wait">Wait</string>
     <string name="OnMyWay">OnMyWay</string>
     <string name="Done">Done</string>
+    <string name="title_activity_list_view">list_view</string>
 </resources>
