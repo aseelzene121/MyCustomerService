@@ -36,7 +36,7 @@ public class Coustemerservice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(Coustemerservice.this, Coustemerservice.class);
+                i = new Intent(Coustemerservice.this, ClientRequest.class);
                 startActivity(i);
     }
 
