@@ -45,6 +45,7 @@ public class list_view extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
     @Override
