@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
@@ -19,9 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
  * Created by user on 12/4/2016.
  */
 public class AddTasks extends AppCompatActivity {
-    private Button rdWait;
-    private Button rdDone;
-    private Button rdOnMyWay;
+    private EditText etZoneCode;
+    private EditText etName;
     private RatingBar rbPriority;
     private Button btSave;
 
@@ -29,20 +29,28 @@ public class AddTasks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
-
-        rdDone = (RadioButton) findViewById(R.id.rdDone);
+        etZoneCode=(EditText) findViewById(R.id.etZoneCode);
+        etName=(EditText) findViewById(R.id.etName);
         btSave = (Button) findViewById(R.id.btnSave);
-        rdWait = (RadioButton) findViewById(R.id.rdWait);
-        rdOnMyWay = (RadioButton) findViewById(R.id.rdOnMyWay);
         rbPriority = (RatingBar) findViewById(R.id.rbPriority);
         eventhander();
     }
 
     private void dataHandler() {
-        boolean isOk = true;
+        String stName = etName.getText().toString();
+        String stZoneCode = etZoneCode.getText().toString();
         float stPriority = rbPriority.getRating();
-        boolean isOK = true;
-        if (isOK) {
+        boolean isOk = true;
+        if (stName.length()==0){
+            etName.setError("Wrong Name");
+            isOk=false;
+        }
+        if (stZoneCode.length()==0){
+            etZoneCode.setError("Wrong ZonrCode");
+            isOk=false;
+        }
+        if (isOk)
+        {
             //isOk
             Request request = new Request();
             request.setPriority(stPriority);
