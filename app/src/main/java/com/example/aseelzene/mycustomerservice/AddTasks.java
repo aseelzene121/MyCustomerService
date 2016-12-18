@@ -23,25 +23,26 @@ public class AddTasks extends AppCompatActivity {
     private Button rdDone;
     private Button rdOnMyWay;
     private RatingBar rbPriority;
+    private Button btSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_request);
+        setContentView(R.layout.activity_add_task);
 
         rdDone = (RadioButton) findViewById(R.id.rdDone);
+        btSave = (Button) findViewById(R.id.btnSave);
         rdWait = (RadioButton) findViewById(R.id.rdWait);
         rdOnMyWay = (RadioButton) findViewById(R.id.rdOnMyWay);
         rbPriority = (RatingBar) findViewById(R.id.rbPriority);
-       
+        eventhander();
     }
 
     private void dataHandler() {
         boolean isOk = true;
         float stPriority = rbPriority.getRating();
         boolean isOK = true;
-        if (isOK)
-        {
+        if (isOK) {
             //isOk
             Request request = new Request();
             request.setPriority(stPriority);
@@ -71,6 +72,15 @@ public class AddTasks extends AppCompatActivity {
 
             });
         }
+    }
+
+    public void eventhander() {
+        btSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
 

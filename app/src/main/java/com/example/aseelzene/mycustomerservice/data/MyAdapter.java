@@ -31,7 +31,7 @@ public class MyAdapter extends android.widget.ArrayAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_list_view, parent, false);
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_request, parent, false);
         RadioButton rdOnMyWay = (RadioButton) convertView.findViewById(R.id.rdOnMyWay);
         CheckBox cbCheck=(CheckBox) convertView.findViewById(R.id.cbCheck);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);

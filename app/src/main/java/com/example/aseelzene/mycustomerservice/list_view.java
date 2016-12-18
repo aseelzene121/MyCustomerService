@@ -57,7 +57,7 @@ public class list_view extends AppCompatActivity {
     private void initListView() {
         String email = FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.', '_');
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference(email);
-        reference.child("Request").addValueEventListener(new ValueEventListener() {
+        reference.child("request").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 adapter.clear();
