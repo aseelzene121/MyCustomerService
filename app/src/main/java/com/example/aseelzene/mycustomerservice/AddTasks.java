@@ -27,7 +27,7 @@ public class AddTasks extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //** only your code is run. The existing code is ignored completely.
         setContentView(R.layout.activity_add_task);
         etZoneCode=(EditText) findViewById(R.id.etZoneCode);
         etName=(EditText) findViewById(R.id.etName);
@@ -39,7 +39,7 @@ public class AddTasks extends AppCompatActivity {
     private void dataHandler() {
         String stName = etName.getText().toString();
         String stZoneCode = etZoneCode.getText().toString();
-        float stPriority = rbPriority.getRating();
+        float stPriority = rbPriority.getRating();//**??
         boolean isOk = true;
         if (stName.length()==0){
             etName.setError("Wrong Name");
@@ -58,9 +58,9 @@ public class AddTasks extends AppCompatActivity {
             //get current user email
             String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
             email = email.replace(".", "_");
-            //all my task will be under my email under the root MyTasks
+            //all my task will be under my email under the root Request
             //child can not contain chars: $,#,.,...
-            // MyTask m = new MyTask();
+            // Request m = new Request();
 
             reference.child(email).child("request").push().setValue(request, new DatabaseReference.CompletionListener() {
                 @Override
@@ -73,7 +73,7 @@ public class AddTasks extends AppCompatActivity {
                     } else {
                         Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-                        //reference.setValue;}
+                        //reference.setValue;
                     }
                 }
 
@@ -85,7 +85,7 @@ public class AddTasks extends AppCompatActivity {
     public void eventhander() {
         btSave.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {  // do something when the button is clicked
 
             }
         });
