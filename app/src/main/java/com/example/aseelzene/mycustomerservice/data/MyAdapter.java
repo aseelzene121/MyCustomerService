@@ -24,9 +24,9 @@ public class MyAdapter extends android.widget.ArrayAdapter {
     private DatabaseReference reference;
     public MyAdapter(Context context, int resource) {
         super(context, resource);
-//        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-      //  email = email.replace(".", "_");
-        //reference = FirebaseDatabase.getInstance().getReference(email).child("Request");
+       String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        email = email.replace(".", "_");
+        reference = FirebaseDatabase.getInstance().getReference(email).child("Request");
     }
 
     @Override

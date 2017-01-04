@@ -34,7 +34,7 @@ public class list_view extends AppCompatActivity {
         rdDone = (Button) findViewById(R.id.rdDone);
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
-       adapter = new MyAdapter(this, R.layout.activity_list_view);
+        adapter = new MyAdapter(this, R.layout.activity_list_view);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -62,18 +62,18 @@ public class list_view extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 adapter.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-              Request request = ds.getValue(Request.class);
+                 Request request = ds.getValue(Request.class);
                    adapter.add(request);
                 }
             }
 
-            //@Override
+            @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
+    }
   }
-}
 
 
 
