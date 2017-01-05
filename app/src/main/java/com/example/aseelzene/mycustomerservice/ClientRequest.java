@@ -120,7 +120,7 @@ public class ClientRequest extends AppCompatActivity {
     }
 
     /**
-     * Created by user on 12/4/2016.
+     * Created by user on 12/4/2016
      */
     public static class AddTasks extends AppCompatActivity {
         private EditText etZoneCode;
