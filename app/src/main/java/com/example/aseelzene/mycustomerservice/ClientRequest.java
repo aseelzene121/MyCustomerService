@@ -78,8 +78,8 @@ public class ClientRequest extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
     }
+
     private void dataHandler() {
         //1.getting data
         String stEmail = etEmail.getText().toString();
@@ -108,7 +108,7 @@ public class ClientRequest extends AppCompatActivity {
                     Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(ClientRequest.this,Coustemerservice.class);
                     startActivity(i);
-                    finish();
+                    finish();// finish an exit this activity
 
                 } else {
                     Toast.makeText(ClientRequest.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -138,6 +138,11 @@ public class ClientRequest extends AppCompatActivity {
             rbPriority = (RatingBar) findViewById(R.id.rbPriority);
             eventhander();
         }
+        /**
+         * 1.getting data from the ui from(edittext ,checkbox...)
+         * 2.checking data (the email text is ok, the password...)
+         * 3.dealing with the data
+         */
 
         private void dataHandler() {
             String stName = etName.getText().toString();

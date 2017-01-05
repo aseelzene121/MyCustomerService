@@ -12,7 +12,7 @@ public class Request {
     private String Wait;
     private String Done;
     private String onMyWay;
-    private int Priority;
+    private float Priority;
     private  String id;
     private  boolean isCompleted;
 
@@ -58,11 +58,11 @@ public class Request {
     public void setOnMyWay(String OnMyWay){
         this.onMyWay= OnMyWay;
     }
-    public int getPriority(){
+    public Float getPriority(){
         return Priority;
     }
-    public void setPriority(Float priority){
-        this.Priority=Priority;
+    public void setPriority(float priority){
+      this.Priority=priority;
     }
 
 
