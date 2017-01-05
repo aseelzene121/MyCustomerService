@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
@@ -36,9 +37,13 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         CheckBox cbCheck=(CheckBox) convertView.findViewById(R.id.cbCheck);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
+        ImageButton btnSave=(ImageButton)    convertView.findViewById(R.id.btnSave);
         RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
         final Request request = (Request) getItem(position);
-        rdDone.setOnClickListener(new View.OnClickListener() {
+        rdDone.setText(request.getDone());
+        rdOnMyWay.setText(request.getOnMyWay());
+        rdWait.setText(request.getWait());
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
@@ -72,4 +77,5 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         });
         return convertView;
     }
-    }
+}
+

@@ -14,10 +14,9 @@ public class Request {
     private String onMyWay;
     private int Priority;
     private  String id;
-    private String adapter;
     private  boolean isCompleted;
 
-    public Request(String Wait, String Done, String onMyWay, int priority, String id, String adapter){
+    public Request(String Wait, String Done, String onMyWay, int priority, String id){
         this.Wait=Wait;
         this.Done=Done;
         this.onMyWay=onMyWay;
@@ -65,12 +64,6 @@ public class Request {
     public void setPriority(Float priority){
         this.Priority=Priority;
     }
-    public String getadapter(){
-        return adapter;
-    }
-    public void setadapter(String adapter){
-        this.adapter=adapter;
-    }
 
 
     @Override
@@ -81,7 +74,6 @@ public class Request {
                 ", Wait=" + Wait +
                 ", id=" +id +
                 ",Priority="+Priority+
-                ",ada[ter="+adapter+
                 '}';
     }
     public boolean setIsCompleted(){
