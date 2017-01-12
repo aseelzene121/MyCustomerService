@@ -58,7 +58,7 @@ public class ClientRequest extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i;
                 i = new Intent(ClientRequest.this, Request.class);
-//                startActivity(i);
+               startActivity(i);
             }
         });
         btnSignin.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +127,9 @@ public class ClientRequest extends AppCompatActivity {
         private EditText etName;
         private RatingBar rbPriority;
         private Button btSave;
-
+        private EditText etDone;
+        private EditText etWait;
+        private EditText etOnMyWay;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -136,6 +138,9 @@ public class ClientRequest extends AppCompatActivity {
             etName=(EditText) findViewById(R.id.etName);
             btSave = (Button) findViewById(R.id.btnSave);
             rbPriority = (RatingBar) findViewById(R.id.rbPriority);
+            etDone = (EditText) findViewById(R.id.rdDone);
+            etOnMyWay =(EditText) findViewById(R.id.rdOnMyWay);
+            etWait=(EditText)findViewById(R.id.rdWait);
             eventhander();
         }
         /**
@@ -148,6 +153,9 @@ public class ClientRequest extends AppCompatActivity {
             String stName = etName.getText().toString();
             String stZoneCode = etZoneCode.getText().toString();
             float stPriority = rbPriority.getRating();
+            String stDone = etDone.getText().toString();
+            String stWait =etWait.getText().toString();
+            String stOnMyWay =etOnMyWay.getText().toString();
             boolean isOk = true;
             if (stName.length()==0){
                 etName.setError("Wrong Name");
@@ -162,6 +170,9 @@ public class ClientRequest extends AppCompatActivity {
                 //isOk
                 Request request = new Request();
                 request.setPriority(stPriority);
+                request.setDone(stDone);
+                request.setWait(stWait);
+                request.setOnMyWay(stOnMyWay);
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
                 //get current user email
                 String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();

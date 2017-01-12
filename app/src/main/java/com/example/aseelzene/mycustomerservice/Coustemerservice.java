@@ -42,9 +42,11 @@ public class Coustemerservice extends AppCompatActivity {
     }
 
     private void dataHandler() {
+        //getting data
         String stCode = etClasscode.getText().toString();
         String stEmail = etEmail.getText().toString();
         boolean isOk = true;
+        //checking
         if (stCode.length() == 0) {
             etClasscode.setError("wrong code");
             isOk = false;
@@ -73,11 +75,12 @@ public class Coustemerservice extends AppCompatActivity {
                     Toast.makeText(Coustemerservice.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
-
+dataHandler();
             }
 
                 });
             }
+
         });
     }
 }
