@@ -112,7 +112,7 @@ public class ClientRequest extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(ClientRequest.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    task.getException().printStackTrace();
+                    task.getException().printStackTrace(); //**Toast:A toast provides simple feedback about an operation in a small popup.
                 }
             }
         });

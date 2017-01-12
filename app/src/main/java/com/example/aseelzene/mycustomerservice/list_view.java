@@ -62,8 +62,8 @@ public class list_view extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 adapter.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    Request request = ds.getValue(Request.class);
-                    adapter.add(request);
+                 Request request = ds.getValue(Request.class);
+                   adapter.add(request);
                 }
             }
 
@@ -73,7 +73,7 @@ public class list_view extends AppCompatActivity {
             }
         });
     }
-}
+  }
 
 
 
