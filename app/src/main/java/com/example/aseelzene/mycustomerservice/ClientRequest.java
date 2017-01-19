@@ -48,9 +48,23 @@ public class ClientRequest extends AppCompatActivity {
         btnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i;
-                i = new Intent(ClientRequest.this, Coustemerservice.class);
-                startActivity(i);
+
+                auth.signInWithEmailAndPassword("client@gmail.com", "123456").addOnCompleteListener(ClientRequest.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(ClientRequest.this, Coustemerservice.class);
+                            startActivity(i);
+                            finish();// finish an exit this activity
+
+                        } else {
+                            Toast.makeText(ClientRequest.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            task.getException().printStackTrace(); //**Toast:A toast provides simple feedback about an operation in a small popup.
+                        }
+                    }
+                });
+
             }
         });
         btnServer.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +79,7 @@ public class ClientRequest extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                Intent i;
-              i=new Intent(ClientRequest.this,list_view.class);
+              i=new Intent(ClientRequest.this,List_view.class);
                 startActivity(i);
                 dataHandler();
             }
@@ -122,94 +136,94 @@ public class ClientRequest extends AppCompatActivity {
     /**
      * Created by user on 12/4/2016
      */
-    public static class AddTasks extends AppCompatActivity {
-        private EditText etZoneCode;
-        private EditText etName;
-        private RatingBar rbPriority;
-        private Button btSave;
-        private EditText etDone;
-        private EditText etWait;
-        private EditText etOnMyWay;
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_add_task);
-            etZoneCode=(EditText) findViewById(R.id.etZoneCode);
-            etName=(EditText) findViewById(R.id.etName);
-            btSave = (Button) findViewById(R.id.btnSave);
-            rbPriority = (RatingBar) findViewById(R.id.rbPriority);
-            etDone = (EditText) findViewById(R.id.rdDone);
-            etOnMyWay =(EditText) findViewById(R.id.rdOnMyWay);
-            etWait=(EditText)findViewById(R.id.rdWait);
-            eventhander();
-        }
-        /**
-         * 1.getting data from the ui from(edittext ,checkbox...)
-         * 2.checking data (the email text is ok, the password...)
-         * 3.dealing with the data
-         */
-
-        private void dataHandler() {
-            String stName = etName.getText().toString();
-            String stZoneCode = etZoneCode.getText().toString();
-            float stPriority = rbPriority.getRating();
-            String stDone = etDone.getText().toString();
-            String stWait =etWait.getText().toString();
-            String stOnMyWay =etOnMyWay.getText().toString();
-            boolean isOk = true;
-            if (stName.length()==0){
-                etName.setError("Wrong Name");
-                isOk=false;
-            }
-            if (stZoneCode.length()==0){
-                etZoneCode.setError("Wrong ZonrCode");
-                isOk=false;
-            }
-            if (isOk)
-            {
-                //isOk
-                Request request = new Request();
-                request.setPriority(stPriority);
-                request.setDone(stDone);
-                request.setWait(stWait);
-                request.setOnMyWay(stOnMyWay);
-                DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-                //get current user email
-                String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-                email = email.replace(".", "_");
-                //all my task will be under my email under the root MyTasks
-                //child can not contain chars: $,#,.,...
-                // MyTask m = new MyTask();
-
-                reference.child(email).child("request").push().setValue(request, new DatabaseReference.CompletionListener() {
-                    @Override
-                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-
-                        if (databaseError == null) {
-                            Toast.makeText(getBaseContext(), "save ok", Toast.LENGTH_LONG).show();
-                            finish();// finish an exit this activity
-
-                        } else {
-                            Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
-                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-                            //reference.setValue;}
-                        }
-                    }
-
-
-                });
-            }
-        }
-
-        public void eventhander() {
-            btSave.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    dataHandler();
-                }
-            });
-        }
-    }
+//    public static class AddTasks extends AppCompatActivity {
+//        private EditText etZoneCode;
+//        private EditText etName;
+//        private RatingBar rbPriority;
+//        private Button btSave;
+//        private EditText etDone;
+//        private EditText etWait;
+//        private EditText etOnMyWay;
+//        @Override
+//        protected void onCreate(Bundle savedInstanceState) {
+//            super.onCreate(savedInstanceState);
+//            setContentView(R.layout.activity_client_request);
+//            etZoneCode=(EditText) findViewById(R.id.etZoneCode);
+//            etName=(EditText) findViewById(R.id.etName);
+//            btSave = (Button) findViewById(R.id.btnSave);
+//            rbPriority = (RatingBar) findViewById(R.id.rbPriority);
+//            etDone = (EditText) findViewById(R.id.rdDone);
+//            etOnMyWay =(EditText) findViewById(R.id.rdOnMyWay);
+//            etWait=(EditText)findViewById(R.id.rdWait);
+//            eventhander();
+//        }
+//        /**
+//         * 1.getting data from the ui from(edittext ,checkbox...)
+//         * 2.checking data (the email text is ok, the password...)
+//         * 3.dealing with the data
+//         */
+//
+//        private void dataHandler() {
+//            String stName = etName.getText().toString();
+//            String stZoneCode = etZoneCode.getText().toString();
+//            float stPriority = rbPriority.getRating();
+//            String stDone = etDone.getText().toString();
+//            String stWait =etWait.getText().toString();
+//            String stOnMyWay =etOnMyWay.getText().toString();
+//            boolean isOk = true;
+//            if (stName.length()==0){
+//                etName.setError("Wrong Name");
+//                isOk=false;
+//            }
+//            if (stZoneCode.length()==0){
+//                etZoneCode.setError("Wrong ZonrCode");
+//                isOk=false;
+//            }
+//            if (isOk)
+//            {
+//                //isOk
+//                Request request = new Request();
+////                request.setPriority(stPriority);
+////                request.setDone(stDone);
+////                request.setWait(stWait);
+////                request.setOnMyWay(stOnMyWay);
+//                DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+//                //get current user email
+//                String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+//                email = email.replace(".", "_");
+//                //all my task will be under my email under the root MyTasks
+//                //child can not contain chars: $,#,.,...
+//                // MyTask m = new MyTask();
+//
+//                reference.child(email).child("request").push().setValue(request, new DatabaseReference.CompletionListener() {
+//                    @Override
+//                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+//
+//                        if (databaseError == null) {
+//                            Toast.makeText(getBaseContext(), "save ok", Toast.LENGTH_LONG).show();
+//                            finish();// finish an exit this activity
+//
+//                        } else {
+//                            Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
+//                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+//                            //reference.setValue;}
+//                        }
+//                    }
+//
+//
+//                });
+//            }
+//        }
+//
+//        public void eventhander() {
+//            btSave.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    dataHandler();
+//                }
+//            });
+//        }
+//    }
 }
 
 

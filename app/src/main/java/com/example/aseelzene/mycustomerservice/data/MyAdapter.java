@@ -40,9 +40,9 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         ImageButton btnSave=(ImageButton)    convertView.findViewById(R.id.btnSave);
         RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
         final Request request = (Request) getItem(position);
-        rdDone.setText(request.getDone());
-        rdOnMyWay.setText(request.getOnMyWay());
-        rdWait.setText(request.getWait());
+//        rdDone.setText(request.getDone());
+//        rdOnMyWay.setText(request.getOnMyWay());
+//        rdWait.setText(request.getWait());
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,14 +67,14 @@ public class MyAdapter extends android.widget.ArrayAdapter {
                 Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
             }
         });
-        rbPriority.setRating(request.getPriority());
-        cbCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                request.setIsCompleted(b);
-                Toast.makeText(getContext(),"Checked"+""+ b,Toast.LENGTH_LONG).show();
-            }
-        });
+////        rbPriority.setRating(request.getPriority());
+////        cbCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+////            @Override
+////            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+////                request.setIsCompleted(b);
+//                Toast.makeText(getContext(),"Checked"+""+ b,Toast.LENGTH_LONG).show();
+//            }
+//        });
         return convertView;
     }
 }

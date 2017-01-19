@@ -17,12 +17,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class list_view extends AppCompatActivity {
+public class List_view extends AppCompatActivity {
     private Button rdWait;
     private Button rdDone;
     private Button rdOnMyWay;
     private MyAdapter adapter;
-    private list_view ivTasks;
+    private List_view ivTasks;
 
 
     @Override

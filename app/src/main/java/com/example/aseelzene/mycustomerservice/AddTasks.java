@@ -53,7 +53,7 @@ public class AddTasks extends AppCompatActivity {
         {
             //isOk
             Request request = new Request();
-            request.setPriority(stPriority);
+           // request.setPriority(stPriority);
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
             //get current user email
             String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
@@ -86,7 +86,7 @@ public class AddTasks extends AppCompatActivity {
         btSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+dataHandler();
             }
         });
     }

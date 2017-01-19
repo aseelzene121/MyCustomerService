@@ -9,79 +9,70 @@ import com.example.aseelzene.mycustomerservice.Signup;
  * Created by user on 11/15/2016.
  */
 public class Request {
-    private String Wait;
-    private String Done;
-    private String onMyWay;
-    private float Priority;
+    public final static String wait="wait";
+    public final static String onMyWay="onMyWay";
+    public final static String done="done";
+
+   ;
+    private String status;
+    private String name;
+    private String zoneCode;
     private  String id;
     private  boolean isCompleted;
 
-    public Request(String Wait, String Done, String onMyWay, int priority, String id){
-        this.Wait=Wait;
-        this.Done=Done;
-        this.onMyWay=onMyWay;
-        this.Priority=priority;
-        this.id=id;
-        this.isCompleted=isCompleted();
+    public Request() {
     }
-    public Request()
-    {
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getZoneCode() {
+        return zoneCode;
+    }
+
+    public void setZoneCode(String zoneCode) {
+        this.zoneCode = zoneCode;
     }
 
     public boolean isCompleted() {
         return isCompleted;
     }
-    public void setIsCompleted(boolean isCompleted){this.isCompleted=isCompleted;}
 
-    public  String getId(){
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
+
+    public String getId() {
         return id;
     }
-    public void setId(String id){
-        this.id=id;
-    }
-    public String getWait(){
-        return Wait;
-    }
-    public void setWait(String wait){
-        this.Wait=wait;
-    }
-     public String getDone(){
-         return Done;
-     }
-    public void setDone(String Done){
-        this.Done=Done;
-    }
-    public String getOnMyWay(){
-        return onMyWay;
-    }
-    public void setOnMyWay(String OnMyWay){
-        this.onMyWay= OnMyWay;
-    }
-    public Float getPriority(){
-        return Priority;
-    }
-    public void setPriority(float priority){
-      this.Priority=priority;
-    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
     @Override
     public String toString() {
         return "Request{" +
-                "Done='" + Done + '\'' +
-                ", onMyWay='" +onMyWay + '\'' +
-                ", Wait=" + Wait +
-                ", id=" +id +
-                ",Priority="+Priority+
+                "status='" + status + '\'' +
+                ", name='" + name + '\'' +
+                ", zoneCode='" + zoneCode + '\'' +
+                ", id='" + id + '\'' +
+                ", isCompleted=" + isCompleted +
                 '}';
     }
-    public boolean setIsCompleted(){
-        if (isCompleted);
-        return true;
-
-    }
-
 }
 
 
