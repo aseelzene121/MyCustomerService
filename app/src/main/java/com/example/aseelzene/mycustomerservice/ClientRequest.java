@@ -40,7 +40,7 @@ public class ClientRequest extends AppCompatActivity {
         btnSignin=(Button) findViewById(R.id.btnSignin);
         btnServer = (Button) findViewById(R.id.btnServer);
         auth = FirebaseAuth.getInstance();
-        eventHandler(); //**
+        eventHandler(); //**inv
 
     }
 
@@ -119,7 +119,7 @@ public class ClientRequest extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();// **MSN
                     Intent i = new Intent(ClientRequest.this,Coustemerservice.class);
                     startActivity(i);
                     finish();// finish an exit this activity
