@@ -72,7 +72,7 @@ public class ClientRequest extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i;
                 i = new Intent(ClientRequest.this, Request.class);
-               startActivity(i);
+//               startActivity(i);
             }
         });
         btnSignin.setOnClickListener(new View.OnClickListener() {
