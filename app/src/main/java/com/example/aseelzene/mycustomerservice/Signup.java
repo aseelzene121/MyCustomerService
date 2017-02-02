@@ -81,7 +81,6 @@ public class Signup extends AppCompatActivity {
             if (user != null)
 
             {
-
                 //user is signed in
 
                 Toast.makeText(Signup.this, "user is signed in.", Toast.LENGTH_SHORT).show();
@@ -90,7 +89,6 @@ public class Signup extends AppCompatActivity {
             } else
 
             {
-
                 //user signed out
 
                 Toast.makeText(Signup.this, "user signed out.", Toast.LENGTH_SHORT).show();
