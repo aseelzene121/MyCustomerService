@@ -20,8 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Coustemerservice extends AppCompatActivity {
     private Button btnHelpme;
-    private EditText etClasscode;
+    private EditText etFreeText;
     private EditText etName;
+    private EditText etClasscode;
     private FirebaseAuth auth;
 
     @Override
@@ -29,8 +30,9 @@ public class Coustemerservice extends AppCompatActivity {
         super.onCreate(savedInstanceState);//super: extend
         setContentView(R.layout.activity_coustemerservice);
         etName = (EditText) (findViewById(R.id.etName));
-        etClasscode = (EditText) (findViewById(R.id.etClasscode));
+        etFreeText = (EditText) (findViewById(R.id.etFreeText));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
+        etClasscode = (EditText) (findViewById(R.id.etClasscode));
         eventHandler();
         auth = FirebaseAuth.getInstance();
     }
@@ -52,12 +54,12 @@ public class Coustemerservice extends AppCompatActivity {
 
     private void dataHandler() {
         //getting data
-        String stCode = etClasscode.getText().toString();
+        String stCode = etFreeText.getText().toString();
         String stEmail = etName.getText().toString();
         boolean isOk = true;
         //checking
         if (stCode.length() == 0) {
-            etClasscode.setError("wrong code");
+            etFreeText.setError("wrong code");
             isOk = false;
 
         }
