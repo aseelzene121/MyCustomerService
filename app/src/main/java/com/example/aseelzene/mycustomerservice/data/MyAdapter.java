@@ -40,9 +40,9 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         ImageButton btnSave=(ImageButton)    convertView.findViewById(R.id.btnSave);
         RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
         final Request request = (Request) getItem(position);
-//        rdDone.setText(request.getDone());
-//        rdOnMyWay.setText(request.getOnMyWay());
-//        rdWait.setText(request.getWait());
+     //   rdDone.setText(request.getDone());
+      // rdOnMyWay.setText(request.getOnMyWay());
+     //  rdWait.setText(request.getWait());
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

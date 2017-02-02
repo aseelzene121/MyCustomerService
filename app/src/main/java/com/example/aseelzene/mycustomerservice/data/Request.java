@@ -20,6 +20,14 @@ public class Request {
     private  String id;
     private  boolean isCompleted;
 
+    public  Request (String id, String name, String zoneCode ,String status ,boolean isCompleted){
+        this.id = id;
+        this.name = name;
+        this.zoneCode = zoneCode;
+        this.status =status;
+        this.isCompleted = isCompleted;
+
+    }
     public Request() {
     }
 
