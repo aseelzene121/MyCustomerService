@@ -40,7 +40,7 @@ public class ClientRequest extends AppCompatActivity {
         btnSignin=(Button) findViewById(R.id.btnSignin);
         btnServer = (Button) findViewById(R.id.btnServer);
         auth = FirebaseAuth.getInstance();
-        eventHandler(); //**inv
+        eventHandler(); //**invite
 
     }
 
