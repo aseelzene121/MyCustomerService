@@ -7,7 +7,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#def913">
+        android:background="#c2e9da">
 
         <RadioButton
             android:layout_width="wrap_content"

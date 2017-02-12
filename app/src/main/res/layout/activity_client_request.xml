@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.ClientRequest"
-    android:background="#def913">
+    android:background="#c2e9da">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#def913">
+            android:background="#c2e9da">
 
             <Button
                 android:layout_width="0dp"

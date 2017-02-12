@@ -9,12 +9,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.Signup"
     android:accessibilityLiveRegion="assertive"
-    android:background="#def913">
+    android:background="#c2e9da">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#def913"
+        android:background="#c2e9da"
         android:orientation="vertical">
 
         <EditText
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text="@string/Save"
             android:id="@+id/btnSave"
-            android:background="#54d04d"
+            android:background="#efc9c9"
             android:layout_gravity="right" />
 
     </LinearLayout>
