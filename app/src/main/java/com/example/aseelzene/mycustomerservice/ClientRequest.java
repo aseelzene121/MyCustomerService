@@ -44,7 +44,7 @@ public class ClientRequest extends AppCompatActivity {
 
     }
 
-    private void eventHandler() {
+    private void eventHandler() {//
         btnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
