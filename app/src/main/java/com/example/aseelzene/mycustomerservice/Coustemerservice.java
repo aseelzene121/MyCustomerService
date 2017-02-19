@@ -18,12 +18,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class Coustemerservice extends AppCompatActivity {
     private Button btnHelpme;
     private EditText etFreeText;
-    private EditText etName;
     private EditText etClasscode;
     private FirebaseAuth auth;
+    private EditText etZoneCode;
+    private EditText etName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class Coustemerservice extends AppCompatActivity {
         etFreeText = (EditText) (findViewById(R.id.etFreeText));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
         etClasscode = (EditText) (findViewById(R.id.etClasscode));
+        etZoneCode=(EditText) findViewById(R.id.etZoneCode);
+        etName=(EditText) findViewById(R.id.etName);
+
         eventHandler();
         auth = FirebaseAuth.getInstance();
     }
@@ -54,11 +60,14 @@ public class Coustemerservice extends AppCompatActivity {
 
     private void dataHandler() {
         //getting data
-        String stCode = etFreeText.getText().toString();
+        String stFreeText = etFreeText.getText().toString();
         String stEmail = etName.getText().toString();
+        String stName = etName.getText().toString();
+        String stZoneCode = etClasscode.getText().toString();
+
         boolean isOk = true;
         //checking
-        if (stCode.length() == 0) {
+        if (etZoneCode.length() == 0) {
             etFreeText.setError("wrong code");
             isOk = false;
 
@@ -68,7 +77,14 @@ public class Coustemerservice extends AppCompatActivity {
         }
         if (isOk) {
             //isOk
+            //isOk
             Request request = new Request();
+            request.setName(stName);
+            request.setZoneCode(stZoneCode);
+            request.setStatus(Request.wait);
+            request.setCompleted(false);
+            request.setFreeText(stFreeText);
+            request.setTime(Calendar.getInstance().getTime());//cuuren time
             // request.setPriority(stPriority);
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
             //get current user email

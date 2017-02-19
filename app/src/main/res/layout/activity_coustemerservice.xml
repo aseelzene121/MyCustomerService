@@ -43,42 +43,10 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:editable="true" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/OnMyWay"
-        android:id="@+id/rdOnMyWay"
-        android:layout_marginTop="40dp"
-        android:layout_alignTop="@+id/rdWait"
-        android:layout_alignParentLeft="true"
+        android:editable="false"
+        android:layout_below="@+id/btnHelpme"
         android:layout_alignParentStart="true"
-        android:checked="false" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Wait"
-        android:id="@+id/rdWait"
-        android:layout_marginBottom="150dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:checked="false" />
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Done"
-        android:id="@+id/rdDone"
-        android:checked="false"
-        android:layout_below="@+id/rdOnMyWay"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true" />
 
     <Button
         android:layout_width="72dp"
@@ -88,9 +56,8 @@
         android:background="#efc9c9"
         android:onClick="onClick"
         android:layout_gravity="center_vertical"
-        android:layout_alignBaseline="@+id/editText"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/etFreeText"
+        android:layout_alignEnd="@+id/etFreeText" />
 
     <EditText
         android:layout_width="match_parent"

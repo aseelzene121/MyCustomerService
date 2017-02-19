@@ -53,6 +53,12 @@ public class AddTasks extends AppCompatActivity {
         {
             //isOk
             Request request = new Request();
+            request.setName(stName);
+            request.setZoneCode(stZoneCode);
+            request.setStatus(Request.wait);
+            request.setCompleted(false);
+            //todo add setter to fgree text
+
            // request.setPriority(stPriority);
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
             //get current user email

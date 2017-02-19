@@ -5,6 +5,8 @@ import android.widget.RatingBar;
 
 import com.example.aseelzene.mycustomerservice.Signup;
 
+import java.util.Date;
+
 /**
  * Created by user on 11/15/2016.
  */
@@ -17,18 +19,27 @@ public class Request {
     private String status;
     private String name;
     private String zoneCode;
-    private  String id;
+    private String id;
+    private Date time;
     private  boolean isCompleted;
+    private String FreeText;
 
-    public  Request (String id, String name, String zoneCode ,String status ,boolean isCompleted){
-        this.id = id;
-        this.name = name;
-        this.zoneCode = zoneCode;
-        this.status =status;
-        this.isCompleted = isCompleted;
 
-    }
     public Request() {
+    }
+    public String getFreeText(){
+        return FreeText;
+    }
+    public void setFreeText(String FreeText){
+        this.FreeText=FreeText;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public String getStatus() {
@@ -81,6 +92,8 @@ public class Request {
                 ", isCompleted=" + isCompleted +
                 '}';
     }
+
+
 }
 
 

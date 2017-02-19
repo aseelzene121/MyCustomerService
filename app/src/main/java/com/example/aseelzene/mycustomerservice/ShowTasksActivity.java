@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.example.aseelzene.mycustomerservice.data.MyAdapter;
 import com.example.aseelzene.mycustomerservice.data.Request;
@@ -17,12 +18,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class List_view extends AppCompatActivity {
+public class ShowTasksActivity extends AppCompatActivity {
     private Button rdWait;
     private Button rdDone;
     private Button rdOnMyWay;
     private MyAdapter adapter;
-    private List_view ivTasks;
+    private ListView lvTasks;
 
 
     @Override
@@ -35,6 +36,8 @@ public class List_view extends AppCompatActivity {
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
+        lvTasks =(ListView) findViewById(R.id.lvTasks);
+        lvTasks.setAdapter(adapter);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

@@ -18,7 +18,7 @@
         <activity android:name=".Signup" />
         <activity android:name=".Coustemerservice" />
         <activity
-            android:name=".List_view"
+            android:name=".ShowTasksActivity"
             android:label="@string/title_activity_list_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.example.aseelzene.mycustomerservice.data.Request;
@@ -15,9 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class ClientRequest extends AppCompatActivity {
    private Button btnServer;
@@ -79,7 +75,7 @@ public class ClientRequest extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                Intent i;
-              i=new Intent(ClientRequest.this,List_view.class);
+              i=new Intent(ClientRequest.this,ShowTasksActivity.class);
                 startActivity(i);
                 dataHandler();
             }
