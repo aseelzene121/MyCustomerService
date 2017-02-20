@@ -27,6 +27,7 @@ public class Coustemerservice extends AppCompatActivity {
     private FirebaseAuth auth;
     private EditText etZoneCode;
     private EditText etName;
+    private EditText etTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,7 @@ public class Coustemerservice extends AppCompatActivity {
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
         etClasscode = (EditText) (findViewById(R.id.etClasscode));
         etZoneCode=(EditText) findViewById(R.id.etZoneCode);
-        etName=(EditText) findViewById(R.id.etName);
-
+        etTime =(EditText) findViewById(R.id.etName);
         eventHandler();
         auth = FirebaseAuth.getInstance();
     }
@@ -61,18 +61,18 @@ public class Coustemerservice extends AppCompatActivity {
     private void dataHandler() {
         //getting data
         String stFreeText = etFreeText.getText().toString();
-        String stEmail = etName.getText().toString();
         String stName = etName.getText().toString();
         String stZoneCode = etClasscode.getText().toString();
+        String stTime =  etTime.getText().toString();
 
         boolean isOk = true;
         //checking
-        if (etZoneCode.length() == 0) {
+        if (stFreeText.length() == 0) {
             etFreeText.setError("wrong code");
             isOk = false;
 
         }
-        if (stEmail.length() == 0) {
+        if (stName.length() == 0) {
             etName.setError("wrong Email");
         }
         if (isOk) {

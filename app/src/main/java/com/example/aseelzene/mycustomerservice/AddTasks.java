@@ -25,11 +25,11 @@ public class AddTasks extends AppCompatActivity {
     private RatingBar rbPriority;
     private Button btSave;
 
-    @Override
+   @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+       super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
-        etZoneCode=(EditText) findViewById(R.id.etZoneCode);
+       etZoneCode=(EditText) findViewById(R.id.etZoneCode);
         etName=(EditText) findViewById(R.id.etName);
         btSave = (Button) findViewById(R.id.btnSave);
         rbPriority = (RatingBar) findViewById(R.id.rbPriority);
@@ -48,7 +48,7 @@ public class AddTasks extends AppCompatActivity {
         if (stZoneCode.length()==0){
             etZoneCode.setError("Wrong ZonrCode");
             isOk=false;
-        }
+       }
         if (isOk)
         {
             //isOk
