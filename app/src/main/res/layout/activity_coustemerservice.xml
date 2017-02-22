@@ -24,7 +24,7 @@
             android:ems="10"
             android:id="@+id/etName"
             android:hint="Name"
-            android:background="#54d04d" />
+            android:background="#dc8484" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:ems="10"
             android:id="@+id/etClasscode"
             android:hint="Zone Code"
-            android:background="#ff8a42" />
+            android:background="#9984dc" />
 
     </LinearLayout>
 
@@ -57,7 +57,7 @@
         android:onClick="onClick"
         android:layout_gravity="center_vertical"
         android:layout_below="@+id/etFreeText"
-        android:layout_alignEnd="@+id/etFreeText" />
+        android:layout_alignEnd="@+id/editText" />
 
     <EditText
         android:layout_width="match_parent"

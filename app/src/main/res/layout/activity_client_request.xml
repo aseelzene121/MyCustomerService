@@ -33,7 +33,7 @@
             android:layout_height="134dp"
             android:text="@string/Server"
             android:id="@+id/btnServer"
-            android:background="#ff8a42"
+            android:background="#dc8484"
             android:layout_gravity="center_horizontal" />
 
         <EditText
@@ -50,7 +50,7 @@
             android:ems="10"
             android:id="@+id/etPassw"
             android:hint="Password"
-            android:background="#ff8a42"
+            android:background="#dc8484"
             android:autoText="false" />
 
         <LinearLayout
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
                 android:id="@+id/btnSignUp"
-                android:background="#ff8a42"
+                android:background="#dc8484"
                 android:layout_weight="1"
                 android:layout_gravity="bottom" />
         </LinearLayout>

@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#dc8484">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#c2e9da">
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Wait"
-            android:id="@+id/rdWait"
-            android:checked="false" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Done"
-            android:id="@+id/rdDone"
-            android:checked="false" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/OnMyWay"
             android:id="@+id/rdOnMyWay"
-            android:checked="false" />
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Wait"
+            android:id="@+id/rdWait"
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Done"
+            android:id="@+id/rdDone"
+            android:checked="false"
+            android:layout_gravity="center_horizontal" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c2e9da">
 
         <RatingBar
             android:layout_width="wrap_content"
@@ -47,8 +56,8 @@
         <Button
             android:layout_width="269dp"
             android:layout_height="wrap_content"
-            android:text="@string/Save"
-            android:id="@+id/btnSave"
+            android:text="@string/Done"
+            android:id="@+id/btnDone"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>

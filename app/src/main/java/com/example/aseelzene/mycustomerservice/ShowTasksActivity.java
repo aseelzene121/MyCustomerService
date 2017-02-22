@@ -66,6 +66,7 @@ public class ShowTasksActivity extends AppCompatActivity {
                 adapter.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                  Request request = ds.getValue(Request.class);
+                    request.setId(reference.getKey());
                    adapter.add(request);
                 }
             }
