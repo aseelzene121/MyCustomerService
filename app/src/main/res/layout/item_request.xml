@@ -39,26 +39,11 @@
         android:layout_height="match_parent"
         android:background="#c2e9da">
 
-        <RatingBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rbPriority"
-            android:numStars="5" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Done"
-            android:id="@+id/cbCheck"
-            android:layout_gravity="right"
-            android:checked="false" />
-
         <Button
             android:layout_width="269dp"
             android:layout_height="wrap_content"
             android:text="@string/Done"
-            android:id="@+id/btnDone"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/btnSave" />
 
     </LinearLayout>
 </LinearLayout>

@@ -35,11 +35,11 @@ public class MyAdapter extends android.widget.ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_request, parent, false);
         RadioButton rdOnMyWay = (RadioButton) convertView.findViewById(R.id.rdOnMyWay);
-        CheckBox cbCheck=(CheckBox) convertView.findViewById(R.id.cbCheck);
+       // CheckBox cbCheck=(CheckBox) convertView.findViewById(R.id.cbCheck);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
         Button btnSave=(Button)    convertView.findViewById(R.id.btnSave);
-        RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
+       // RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
         final Request request = (Request) getItem(position);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
