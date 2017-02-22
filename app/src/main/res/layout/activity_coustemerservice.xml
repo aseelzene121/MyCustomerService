@@ -57,7 +57,7 @@
         android:onClick="onClick"
         android:layout_gravity="center_vertical"
         android:layout_below="@+id/etFreeText"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="match_parent"
