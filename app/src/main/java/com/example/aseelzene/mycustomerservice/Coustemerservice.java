@@ -99,7 +99,8 @@ public class Coustemerservice extends AppCompatActivity {
                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
 
                     if (databaseError == null) {
-                        Toast.makeText(getBaseContext(), "save ok", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), "save ok"+databaseReference.getKey(), Toast.LENGTH_LONG).show();
+
                        // finish();// finish an exit this activity
 
                     } else {

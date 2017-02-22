@@ -28,7 +28,7 @@ public class ShowTasksActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //"horasha"
         setContentView(R.layout.activity_list_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,8 +59,8 @@ public class ShowTasksActivity extends AppCompatActivity {
 
     private void initListView() {
         String email = FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.', '_');
-        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference(email);
-        reference.child("request").addValueEventListener(new ValueEventListener() {
+        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
+        reference.child("zone").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 adapter.clear();

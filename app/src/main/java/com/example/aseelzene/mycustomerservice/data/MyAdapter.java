@@ -5,6 +5,7 @@ import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
@@ -37,7 +38,7 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         CheckBox cbCheck=(CheckBox) convertView.findViewById(R.id.cbCheck);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
-        ImageButton btnSave=(ImageButton)    convertView.findViewById(R.id.btnSave);
+        Button btnSave=(Button)    convertView.findViewById(R.id.btnSave);
         RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
         final Request request = (Request) getItem(position);
      //   rdDone.setText(request.getDone());

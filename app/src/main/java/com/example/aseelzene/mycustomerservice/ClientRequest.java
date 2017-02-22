@@ -74,9 +74,7 @@ public class ClientRequest extends AppCompatActivity {
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent i;
-              i=new Intent(ClientRequest.this,ShowTasksActivity.class);
-                startActivity(i);
+
                 dataHandler();
             }
         });
@@ -116,7 +114,8 @@ public class ClientRequest extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();// **MSN
-                    Intent i = new Intent(ClientRequest.this,Coustemerservice.class);
+                    Intent i;
+                    i=new Intent(ClientRequest.this,ShowTasksActivity.class);
                     startActivity(i);
                     finish();// finish an exit this activity
 
