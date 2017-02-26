@@ -63,14 +63,8 @@ public class Coustemerservice extends AppCompatActivity {
                     }
                 });
             }
-
-
         });
     }
-
-    {
-    }
-
 
     private void dataHandler() {
         //getting data
