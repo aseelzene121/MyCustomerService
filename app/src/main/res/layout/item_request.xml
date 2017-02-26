@@ -22,16 +22,14 @@
             android:layout_height="wrap_content"
             android:text="@string/OnMyWay"
             android:id="@+id/rdOnMyWay"
-            android:checked="false"
-            android:layout_gravity="center_horizontal" />
+            android:checked="false" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Wait"
             android:id="@+id/rdWait"
-            android:checked="false"
-            android:layout_gravity="center_horizontal" />
+            android:checked="false" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -49,10 +47,11 @@
         android:background="#c2e9da">
 
         <Button
-            android:layout_width="269dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Done"
-            android:id="@+id/btnSave" />
+            android:id="@+id/btnSave"
+            android:background="#ebd8d8" />
 
     </LinearLayout>
 </LinearLayout>

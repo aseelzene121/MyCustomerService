@@ -23,7 +23,7 @@ public class ShowTasksActivity extends AppCompatActivity {
     private Button rdWait;
     private Button rdDone;
     private Button rdOnMyWay;
-    private EditText etzonecode;
+    private EditText etClasscode;
     private MyAdapter adapter;
     private ListView lvTasks;
 
@@ -37,7 +37,7 @@ public class ShowTasksActivity extends AppCompatActivity {
         rdDone = (Button) findViewById(R.id.rdDone);
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
-        etzonecode =(EditText) findViewById(R.id.etZoneCode);
+        etClasscode =(EditText) findViewById(R.id.etClasscode);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);

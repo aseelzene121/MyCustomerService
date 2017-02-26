@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ShowTasksActivity"
-    tools:showIn="@layout/activity_list_view">
+    tools:showIn="@layout/activity_list_view"
+    android:background="#ebd8d8">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -20,5 +21,6 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lvTasks" />
+        android:id="@+id/lvTasks"
+        android:background="#ebd8d8" />
 </RelativeLayout>
