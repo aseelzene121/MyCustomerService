@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.aseelzene.mycustomerservice.data.MyAdapter;
@@ -22,6 +23,7 @@ public class ShowTasksActivity extends AppCompatActivity {
     private Button rdWait;
     private Button rdDone;
     private Button rdOnMyWay;
+    private EditText etzonecode;
     private MyAdapter adapter;
     private ListView lvTasks;
 
@@ -35,6 +37,7 @@ public class ShowTasksActivity extends AppCompatActivity {
         rdDone = (Button) findViewById(R.id.rdDone);
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
+        etzonecode =(EditText) findViewById(R.id.etZoneCode);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);

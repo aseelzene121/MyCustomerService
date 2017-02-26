@@ -28,6 +28,7 @@ public class Coustemerservice extends AppCompatActivity {
     private EditText etZoneCode;
     private EditText etName;
     private EditText etTime;
+    private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,9 @@ public class Coustemerservice extends AppCompatActivity {
         etFreeText = (EditText) (findViewById(R.id.etFreeText));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
         etClasscode = (EditText) (findViewById(R.id.etClasscode));
-        etZoneCode=(EditText) findViewById(R.id.etZoneCode);
-        etTime =(EditText) findViewById(R.id.etName);
+        etZoneCode = (EditText) findViewById(R.id.etZoneCode);
+        etTime = (EditText) findViewById(R.id.etName);
+        btnBack =(Button) findViewById(R.id.btnBack);
         eventHandler();
         auth = FirebaseAuth.getInstance();
     }
@@ -48,22 +50,34 @@ public class Coustemerservice extends AppCompatActivity {
         btnHelpme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent i;
-//                i = new Intent(Coustemerservice.this, ClientRequest.class);
-//                startActivity(i);
                 dataHandler();
+
+            }
+            {
+                btnBack.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent i;
+                        i=new Intent(Coustemerservice.this,ClientRequest.class);
+                        startActivity(i);
+                    }
+                });
             }
 
 
         });
     }
 
+    {
+    }
+
+
     private void dataHandler() {
         //getting data
         String stFreeText = etFreeText.getText().toString();
         String stName = etName.getText().toString();
         String stZoneCode = etClasscode.getText().toString();
-        String stTime =  etTime.getText().toString();
+        String stTime = etTime.getText().toString();
 
         boolean isOk = true;
         //checking
@@ -99,25 +113,28 @@ public class Coustemerservice extends AppCompatActivity {
                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
 
                     if (databaseError == null) {
-                        Toast.makeText(getBaseContext(), "save ok"+databaseReference.getKey(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), "save ok" + databaseReference.getKey(), Toast.LENGTH_LONG).show();
 
-                       // finish();// finish an exit this activity
+                        // finish();// finish an exit this activity
 
                     } else {
                         Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
                         //reference.setValue;}
                     }
+
                 }
-
-
             });
         }
 
-
     }
-
 }
+
+
+
+
+
+
 
 
 

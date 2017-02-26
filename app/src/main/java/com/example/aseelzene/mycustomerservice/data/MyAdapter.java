@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
@@ -35,12 +36,11 @@ public class MyAdapter extends android.widget.ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_request, parent, false);
         RadioButton rdOnMyWay = (RadioButton) convertView.findViewById(R.id.rdOnMyWay);
-       // CheckBox cbCheck=(CheckBox) convertView.findViewById(R.id.cbCheck);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
         Button btnSave=(Button)    convertView.findViewById(R.id.btnSave);
-       // RatingBar rbPriority = (RatingBar) convertView.findViewById(R.id.rbPriority);
-        final Request request = (Request) getItem(position);
+        EditText etClasscode = (EditText) convertView.findViewById(R.id.etClasscode);
+         final Request request = (Request) getItem(position);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,6 +65,7 @@ public class MyAdapter extends android.widget.ArrayAdapter {
                 Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
             }
         });
+
 ////        rbPriority.setRating(request.getPriority());
 ////        cbCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 ////            @Override

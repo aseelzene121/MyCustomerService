@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:background="#dc8484">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etClasscode"
+        android:layout_gravity="right"
+        android:hint="ZoneCode" />
+
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
