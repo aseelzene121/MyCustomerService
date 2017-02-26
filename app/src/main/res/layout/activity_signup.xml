@@ -9,72 +9,79 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.Signup"
     android:accessibilityLiveRegion="assertive"
-    android:background="#c2e9da">
+    android:background="#fbeee5">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#c2e9da"
+        android:background="#fbeee5"
         android:orientation="vertical">
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/etEmail"
             android:hint="Email"
-            android:background="#dc8484" />
+            android:background="#dc8484"
+            android:layout_weight="1" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etFullName"
             android:hint="Name"
-            android:background="#ebd8d8" />
+            android:background="#ebd8d8"
+            android:layout_weight="1" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassword"
             android:hint="Password"
-            android:background="#dc8484" />
+            android:background="#dc8484"
+            android:layout_weight="1" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etConfirmPassword"
             android:hint="RePassword"
-            android:background="#ebd8d8" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/etZoneCode"
-            android:hint="Zone Code"
-            android:autoText="false"
-            android:background="#dc8484" />
+            android:background="#ebd8d8"
+            android:layout_weight="1" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="151dp"></LinearLayout>
+            android:layout_height="151dp"
+            android:baselineAligned="false"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etZoneCode"
+                android:hint="Zone Code"
+                android:autoText="false"
+                android:background="#dc8484" />
+        </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/Save"
             android:id="@+id/btnSave"
             android:background="#efc9c9"
-            android:layout_gravity="right" />
+            android:layout_gravity="right"
+            android:layout_weight="1" />
 
     </LinearLayout>
 </RelativeLayout>
