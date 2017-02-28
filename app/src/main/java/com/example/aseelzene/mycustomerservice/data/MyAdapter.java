@@ -40,13 +40,13 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
         Button btnSave=(Button) convertView.findViewById(R.id.btnSave);
-        EditText etClock = (EditText) convertView.findViewById(R.id.etClock);
+       // TextClock etClock = (TextClock) convertView.findViewById(R.id.etClock);
         EditText etName =(EditText) convertView.findViewById(R.id.etName);
         EditText etClasscode = (EditText) convertView.findViewById(R.id.etClasscode);
         EditText etZoneCode = (EditText) convertView.findViewById(R.id.etZoneCode);
 
         final Request request = (Request) getItem(position);
-        etClock.setText((CharSequence) request.getTime());
+//        etClock.setText((CharSequence) request.getTime());
         etClasscode.setText(request.getFreeText());
         etName.setText(request.getName());
         etZoneCode.setText(request.getZoneCode());

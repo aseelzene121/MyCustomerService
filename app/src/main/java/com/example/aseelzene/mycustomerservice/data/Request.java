@@ -20,7 +20,7 @@ public class Request {
     private String name;
     private String zoneCode;
     private String id;
-    private Date time;
+    private Date Clock;
     private  boolean isCompleted;
     private String FreeText;
 
@@ -35,11 +35,11 @@ public class Request {
     }
 
     public Date getTime() {
-        return time;
+        return Clock;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setTime(Date Clock) {
+        this.Clock=Clock;
     }
 
     public String getStatus() {

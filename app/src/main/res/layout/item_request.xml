@@ -43,7 +43,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/OnMyWay"
+            android:text="On My Way"
             android:id="@+id/rdOnMyWay"
             android:checked="false" />
 
@@ -71,7 +71,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Done"
+            android:text="@string/Delete"
             android:id="@+id/btnSave"
             android:background="#ebd8d8" />
 
