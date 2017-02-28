@@ -31,9 +31,9 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/etClasscode"
+            android:id="@+id/etZoneCode"
             android:hint="Zone Code"
-            android:background="#9984dc" />
+            android:background="#cdc5e6" />
 
     </LinearLayout>
 
@@ -75,5 +75,12 @@
         android:id="@+id/btnBack"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etClock"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/btnHelpme" />
 
 </RelativeLayout>

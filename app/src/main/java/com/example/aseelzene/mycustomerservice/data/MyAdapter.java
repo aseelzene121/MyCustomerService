@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
+import android.widget.TextClock;
 import android.widget.Toast;
 
 import com.example.aseelzene.mycustomerservice.R;
@@ -38,10 +39,19 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         RadioButton rdOnMyWay = (RadioButton) convertView.findViewById(R.id.rdOnMyWay);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
-        Button btnSave=(Button)    convertView.findViewById(R.id.btnSave);
+        Button btnSave=(Button) convertView.findViewById(R.id.btnSave);
+        EditText etClock = (EditText) convertView.findViewById(R.id.etClock);
+        EditText etName =(EditText) convertView.findViewById(R.id.etName);
         EditText etClasscode = (EditText) convertView.findViewById(R.id.etClasscode);
-         final Request request = (Request) getItem(position);
-        btnSave.setOnClickListener(new View.OnClickListener() {
+        EditText etZoneCode = (EditText) convertView.findViewById(R.id.etZoneCode);
+
+        final Request request = (Request) getItem(position);
+        etClock.setText((CharSequence) request.getTime());
+        etClasscode.setText(request.getFreeText());
+        etName.setText(request.getName());
+        etZoneCode.setText(request.getZoneCode());
+        btnSave.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {

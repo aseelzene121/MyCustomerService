@@ -9,9 +9,32 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
+        android:id="@+id/etZoneCode"
+        android:hint="ZoneCode" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
         android:id="@+id/etClasscode"
         android:layout_gravity="right"
-        android:hint="ZoneCode" />
+        android:hint="FreeText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etName"
+        android:layout_gravity="center_horizontal"
+        android:hint="Name" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etClock"
+        android:layout_gravity="center_horizontal" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -36,8 +59,7 @@
             android:layout_height="wrap_content"
             android:text="@string/Done"
             android:id="@+id/rdDone"
-            android:checked="false"
-            android:layout_gravity="center_horizontal" />
+            android:checked="false" />
     </RadioGroup>
 
     <LinearLayout

@@ -27,7 +27,7 @@ public class ClientRequest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);//extend
         setContentView(R.layout.activity_client_request);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassw = (EditText) findViewById(R.id.etPassw);
