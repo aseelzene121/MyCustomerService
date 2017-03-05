@@ -51,6 +51,7 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         etClock.setText((CharSequence) request.getClock());
         etZoneCode.setText(request.getZoneCode());
         btnSave.setOnClickListener(new View.OnClickListener()
+
         {
             @Override
             public void onClick(View view) {
