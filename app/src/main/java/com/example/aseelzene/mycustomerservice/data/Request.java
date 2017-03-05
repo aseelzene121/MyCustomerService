@@ -34,7 +34,7 @@ public class Request {
         this.FreeText=FreeText;
     }
 
-    public Date getTime() {
+    public Date getClock() {
         return Clock;
     }
 
