@@ -43,13 +43,11 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         TextClock etClock = (TextClock) convertView.findViewById(R.id.etClock);
         EditText etName =(EditText) convertView.findViewById(R.id.etName);
         EditText etClasscode = (EditText) convertView.findViewById(R.id.etClasscode);
-        EditText etZoneCode = (EditText) convertView.findViewById(R.id.etZoneCode);
 
         final Request request = (Request) getItem(position);
         etClasscode.setText(request.getFreeText());
         etName.setText(request.getName());
         etClock.setText((CharSequence) request.getClock());
-        etZoneCode.setText(request.getZoneCode());
         btnSave.setOnClickListener(new View.OnClickListener()
         {
             @Override
