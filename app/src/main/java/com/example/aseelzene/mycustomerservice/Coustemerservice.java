@@ -1,12 +1,14 @@
 package com.example.aseelzene.mycustomerservice;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.aseelzene.mycustomerservice.data.Request;
@@ -14,15 +16,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
 public class Coustemerservice extends AppCompatActivity {
     private Button btnHelpme;
     private EditText etFreeText;
+    private TextView tvStats;
     private EditText etClasscode;
     private FirebaseAuth auth;
     private EditText etZoneCode;
@@ -41,8 +46,18 @@ public class Coustemerservice extends AppCompatActivity {
         etZoneCode = (EditText) findViewById(R.id.etZoneCode);
         etTime = (EditText) findViewById(R.id.etName);
         btnBack =(Button) findViewById(R.id.btnBack);
+        tvStats=(TextView)findViewById(R.id.tvStatus);
         eventHandler();
         auth = FirebaseAuth.getInstance();
+        //to check if the customer have saed request
+        //to read from the saved file
+        SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
+        String key=sharedPreferences.getString("key",null);
+        if(key!=null)//i have a saved key
+        {
+            getRequest(key);
+        }
+
     }
 
 
@@ -109,6 +124,14 @@ public class Coustemerservice extends AppCompatActivity {
                     if (databaseError == null) {
                         Toast.makeText(getBaseContext(), "save ok" + databaseReference.getKey(), Toast.LENGTH_LONG).show();
 
+                        //save key at local storage                               //file name
+                        SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
+                        //to save  value to the file
+                        SharedPreferences.Editor editor=sharedPreferences.edit();
+                                      //"key" the ame of the value
+                        editor.putString("key",databaseReference.getKey());
+                        editor.commit();
+
                         // finish();// finish an exit this activity
 
                     } else {
@@ -121,6 +144,28 @@ public class Coustemerservice extends AppCompatActivity {
             });
         }
 
+    }
+    private void getRequest(String key) {
+        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
+        reference.child("zone").child(key).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                Request request = dataSnapshot.getValue(Request.class);
+                tvStats.append(request.getStatus());
+
+//                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+//                    Request request = ds.getValue(Request.class);
+//                    request.setId(reference.getKey());
+//
+//                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 }
 
