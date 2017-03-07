@@ -26,6 +26,8 @@ public class ShowTasksActivity extends AppCompatActivity {
     private EditText etClasscode;
     private MyAdapter adapter;
     private ListView lvTasks;
+    private Button btnSearch;
+
 
 
     @Override
@@ -37,6 +39,7 @@ public class ShowTasksActivity extends AppCompatActivity {
         rdDone = (Button) findViewById(R.id.rdDone);
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
+
         etClasscode =(EditText) findViewById(R.id.etClasscode);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
         lvTasks =(ListView) findViewById(R.id.lvTasks);
