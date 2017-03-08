@@ -40,14 +40,14 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
         Button btnSave=(Button) convertView.findViewById(R.id.btnSave);
-        TextClock etClock = (TextClock) convertView.findViewById(R.id.etClock);
         EditText etName =(EditText) convertView.findViewById(R.id.etName);
+        ImageButton ibSearch =(ImageButton) convertView.findViewById(R.id.ibSearch);
+        EditText etSearch =(EditText) convertView.findViewById(R.id.etSearch);
         EditText etClasscode = (EditText) convertView.findViewById(R.id.etClasscode);
 
         final Request request = (Request) getItem(position);
         etClasscode.setText(request.getFreeText());
         etName.setText(request.getName());
-        etClock.setText((CharSequence) request.getClock());
         btnSave.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -71,6 +71,18 @@ public class MyAdapter extends android.widget.ArrayAdapter {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
+            }
+        });
+        rdDone.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
+            }
+        });
+        rdWait.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Toast.makeText(getContext(),"Wait",Toast.LENGTH_LONG).show();
             }
         });
 

@@ -22,14 +22,14 @@
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
+            android:id="@+id/ibSearch"
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_search" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2"
+            android:id="@+id/etSearch"
             android:layout_weight="1" />
 
     </LinearLayout>

@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.aseelzene.mycustomerservice.data.MyAdapter;
@@ -26,7 +27,8 @@ public class ShowTasksActivity extends AppCompatActivity {
     private EditText etClasscode;
     private MyAdapter adapter;
     private ListView lvTasks;
-    private Button btnSearch;
+    private ImageButton ibSearch;
+    private EditText etSearch;
 
 
 
@@ -39,8 +41,9 @@ public class ShowTasksActivity extends AppCompatActivity {
         rdDone = (Button) findViewById(R.id.rdDone);
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
-
+        ibSearch =(ImageButton)findViewById(R.id.ibSearch);
         etClasscode =(EditText) findViewById(R.id.etClasscode);
+        etSearch =(EditText) findViewById(R.id.etSearch);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);
