@@ -43,11 +43,10 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         Button btnSave=(Button) convertView.findViewById(R.id.btnSave);
         TextView etZoneCode =(TextView) convertView.findViewById(R.id.etZoneCode);
         TextView etName =(TextView) convertView.findViewById(R.id.etName);
-        ImageButton ibSearch =(ImageButton) convertView.findViewById(R.id.ibSearch);
-        EditText etSearch =(EditText) convertView.findViewById(R.id.etSearch);
-        TextView getFreeText = (TextView) convertView.findViewById(R.id.etFreeText);
+        TextView  Clock =(TextView)  convertView.findViewById(R.id.Clock);
+        TextView etFreeText = (TextView) convertView.findViewById(R.id.etFreeText);
         final Request request = (Request) getItem(position);
-        getFreeText.setText(request.getFreeText());
+        etFreeText.setText(request.getFreeText());
         etName.setText(request.getName());
         etZoneCode.setText(request.getZoneCode());
 

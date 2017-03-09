@@ -150,7 +150,7 @@ public class Coustemerservice extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 Request request = dataSnapshot.getValue(Request.class);
-                tvStatus.append(request.getStatus());
+               tvStatus.append(request.getStatus());
 
 //                for (DataSnapshot ds : dataSnapshot.getChildren()) {
 //                    Request request = ds.getValue(Request.class);
