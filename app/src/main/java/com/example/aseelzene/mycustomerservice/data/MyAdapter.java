@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.TextClock;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.aseelzene.mycustomerservice.R;
@@ -40,14 +41,16 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
         Button btnSave=(Button) convertView.findViewById(R.id.btnSave);
-        EditText etName =(EditText) convertView.findViewById(R.id.etName);
+        TextView etZoneCode =(TextView) convertView.findViewById(R.id.etZoneCode);
+        TextView etName =(TextView) convertView.findViewById(R.id.etName);
         ImageButton ibSearch =(ImageButton) convertView.findViewById(R.id.ibSearch);
         EditText etSearch =(EditText) convertView.findViewById(R.id.etSearch);
-        EditText etClasscode = (EditText) convertView.findViewById(R.id.etClasscode);
-
+        TextView getFreeText = (TextView) convertView.findViewById(R.id.etFreeText);
         final Request request = (Request) getItem(position);
-        etClasscode.setText(request.getFreeText());
+        getFreeText.setText(request.getFreeText());
         etName.setText(request.getName());
+        etZoneCode.setText(request.getZoneCode());
+
         btnSave.setOnClickListener(new View.OnClickListener()
         {
             @Override

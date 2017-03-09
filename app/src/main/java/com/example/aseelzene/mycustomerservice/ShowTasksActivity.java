@@ -24,7 +24,7 @@ public class ShowTasksActivity extends AppCompatActivity {
     private Button rdWait;
     private Button rdDone;
     private Button rdOnMyWay;
-    private EditText etClasscode;
+    private EditText etFreeText;
     private MyAdapter adapter;
     private ListView lvTasks;
     private ImageButton ibSearch;
@@ -42,7 +42,7 @@ public class ShowTasksActivity extends AppCompatActivity {
         rdWait = (Button) findViewById(R.id.rdWait);
         rdOnMyWay = (Button) findViewById(R.id.rdOnMyWay);
         ibSearch =(ImageButton)findViewById(R.id.ibSearch);
-        etClasscode =(EditText) findViewById(R.id.etClasscode);
+        etFreeText =(EditText) findViewById(R.id.etFreeText);
         etSearch =(EditText) findViewById(R.id.etSearch);
         adapter = new MyAdapter(this, R.layout.activity_list_view);
         lvTasks =(ListView) findViewById(R.id.lvTasks);

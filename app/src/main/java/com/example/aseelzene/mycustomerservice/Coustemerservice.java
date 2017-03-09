@@ -27,8 +27,7 @@ import java.util.Calendar;
 public class Coustemerservice extends AppCompatActivity {
     private Button btnHelpme;
     private EditText etFreeText;
-    private TextView tvStats;
-    private EditText etClasscode;
+    private TextView tvStatus;
     private FirebaseAuth auth;
     private EditText etZoneCode;
     private EditText etName;
@@ -42,11 +41,10 @@ public class Coustemerservice extends AppCompatActivity {
         etName = (EditText) (findViewById(R.id.etName));
         etFreeText = (EditText) (findViewById(R.id.etFreeText));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
-        etClasscode = (EditText) (findViewById(R.id.etClasscode));
         etZoneCode = (EditText) findViewById(R.id.etZoneCode);
         etTime = (EditText) findViewById(R.id.etName);
         btnBack =(Button) findViewById(R.id.btnBack);
-        tvStats=(TextView)findViewById(R.id.tvStatus);
+        tvStatus=(TextView)findViewById(R.id.tvStatus);
         eventHandler();
         auth = FirebaseAuth.getInstance();
         //to check if the customer have saed request
@@ -85,7 +83,7 @@ public class Coustemerservice extends AppCompatActivity {
         //getting data
         String stFreeText = etFreeText.getText().toString();
         String stName = etName.getText().toString();
-        String stZoneCode = etFreeText.getText().toString();
+        String stZoneCode = etZoneCode.getText().toString();
         String stTime = etTime.getText().toString();
 
         boolean isOk = true;
@@ -152,7 +150,7 @@ public class Coustemerservice extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 Request request = dataSnapshot.getValue(Request.class);
-                tvStats.append(request.getStatus());
+                tvStatus.append(request.getStatus());
 
 //                for (DataSnapshot ds : dataSnapshot.getChildren()) {
 //                    Request request = ds.getValue(Request.class);

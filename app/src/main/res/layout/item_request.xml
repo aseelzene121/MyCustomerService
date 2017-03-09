@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
 
         android:ems="10"
-        android:id="@+id/etClasscode"
+        android:id="@+id/etFreeText"
         android:layout_gravity="right"
         android:hint="FreeText" />
 
