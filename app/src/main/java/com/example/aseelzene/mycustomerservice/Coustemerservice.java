@@ -59,7 +59,7 @@ public class Coustemerservice extends AppCompatActivity {
     }
 
 
-    private void eventHandler() {//**The EventHandler class provides support for dynamically generating event listeners whose methods execute a simple statement involving an incoming event object and a target object.
+    private void eventHandler() {//**mo3aljt al7dth
         btnHelpme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +79,7 @@ public class Coustemerservice extends AppCompatActivity {
         });
     }
 
-    private void dataHandler() {
+    private void dataHandler() {//**mo3aljt al info west5rajha wf7siha
         //getting data
         String stFreeText = etFreeText.getText().toString();
         String stName = etName.getText().toString();

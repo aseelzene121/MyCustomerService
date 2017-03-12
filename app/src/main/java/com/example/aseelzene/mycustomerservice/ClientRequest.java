@@ -40,7 +40,7 @@ public class ClientRequest extends AppCompatActivity {
 
     }
 
-    private void eventHandler() {//
+    private void eventHandler() {//**mo3aljt alhdth
         btnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +88,7 @@ public class ClientRequest extends AppCompatActivity {
         });
     }
 
-    private void dataHandler() {
+    private void dataHandler() {//**mo3aljt al info west5rajha wf7siha
         //1.getting data
         String stEmail = etEmail.getText().toString();
         String stPassword = etPassw.getText().toString();

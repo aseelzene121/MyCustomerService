@@ -39,7 +39,7 @@ public class Signup extends AppCompatActivity {
 
     }
 
-    private void dataHandler() {
+    private void dataHandler() {//**mo3aljt al info west5rajha wf7siha
         String stEmail = etEmail.getText().toString();
         String stPassword = etPassword.getText().toString();
         String stFullName = etFullName.getText().toString();
