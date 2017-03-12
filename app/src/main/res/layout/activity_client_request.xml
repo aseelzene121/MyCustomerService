@@ -27,7 +27,7 @@
             android:id="@+id/btnCustomer"
             android:layout_gravity="center_horizontal"
             android:textColor="#0c0d0c"
-            android:background="#dbccdb" />
+            android:background="#d8ebdb" />
 
         <Button
             android:layout_width="307dp"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/etEmail"
             android:hint="Email"
-            android:background="#dbccdb" />
+            android:background="#d8ebdb" />
 
         <EditText
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
                 android:id="@+id/btnSignUp"
-                android:background="#dbccdb"
+                android:background="#d8ebdb"
                 android:layout_weight="1" />
         </LinearLayout>
 
