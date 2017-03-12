@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
         android:background="#def913"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_alignParentEnd="true">
 
         <EditText
             android:layout_width="130dp"
@@ -27,7 +28,7 @@
             android:background="#dc8484" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
@@ -43,8 +44,7 @@
         android:ems="10"
         android:id="@+id/tvStatus"
         android:layout_below="@+id/btnHelpme"
-        android:layout_toStartOf="@+id/btnHelpme"
-        android:layout_marginTop="129dp" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="72dp"

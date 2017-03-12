@@ -117,7 +117,7 @@ public class ClientRequest extends AppCompatActivity {
                     Intent i;
                     i=new Intent(ClientRequest.this,ShowTasksActivity.class);
                     startActivity(i);
-                    finish();// finish an exit this activity
+                    finish();//** finish an exit this activity
 
                 } else {
                     Toast.makeText(ClientRequest.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

@@ -57,12 +57,12 @@ public class MyAdapter extends android.widget.ArrayAdapter {
                 reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                        if (databaseError == null) //deleted
+                        if (databaseError == null) //**deleted
                         {
                             Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
-                            // delete from this adapter
+                            // **delete from this adapter
                             remove(request);
-                            setNotifyOnChange(true);//to update the list
+                            setNotifyOnChange(true);//**to update the list
                         }
                     }
                 });

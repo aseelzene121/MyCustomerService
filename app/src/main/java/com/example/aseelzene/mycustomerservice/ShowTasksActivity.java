@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.aseelzene.mycustomerservice.data.MyAdapter;
 import com.example.aseelzene.mycustomerservice.data.Request;
@@ -29,6 +30,7 @@ public class ShowTasksActivity extends AppCompatActivity {
     private ListView lvTasks;
     private ImageButton ibSearch;
     private EditText etSearch;
+
 
 
 

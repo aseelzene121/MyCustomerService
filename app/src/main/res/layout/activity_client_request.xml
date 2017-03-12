@@ -66,8 +66,7 @@
                 android:text="@string/Signin"
                 android:id="@+id/btnSignin"
                 android:background="#ebd8d8"
-                android:layout_weight="1"
-                android:layout_gravity="bottom" />
+                android:layout_weight="1" />
 
             <Button
                 android:layout_width="0dp"
@@ -75,8 +74,7 @@
                 android:text="Sign Up"
                 android:id="@+id/btnSignUp"
                 android:background="#dc8484"
-                android:layout_weight="1"
-                android:layout_gravity="bottom" />
+                android:layout_weight="1" />
         </LinearLayout>
 
     </LinearLayout>

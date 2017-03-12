@@ -29,7 +29,7 @@ public class Coustemerservice extends AppCompatActivity {
     private EditText etFreeText;
     private TextView tvStatus;
     private FirebaseAuth auth;
-    private EditText etZoneCode;
+    private TextView etZoneCode;
     private EditText etName;
     private EditText etTime;
     private Button btnBack;
@@ -41,7 +41,7 @@ public class Coustemerservice extends AppCompatActivity {
         etName = (EditText) (findViewById(R.id.etName));
         etFreeText = (EditText) (findViewById(R.id.etFreeText));
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
-        etZoneCode = (EditText) findViewById(R.id.etZoneCode);
+        etZoneCode = (TextView) findViewById(R.id.etZoneCode);
         etTime = (EditText) findViewById(R.id.etName);
         btnBack =(Button) findViewById(R.id.btnBack);
         tvStatus=(TextView)findViewById(R.id.tvStatus);
