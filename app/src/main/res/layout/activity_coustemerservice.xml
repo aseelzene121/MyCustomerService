@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aseelzene.mycustomerservice.Coustemerservice"
-    android:background="#fbeee5">
+    android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,8 @@
             android:ems="10"
             android:id="@+id/etName"
             android:hint="Name"
-            android:background="#dc8484" />
+            android:background="#dbccdb"
+            android:autoText="false" />
 
         <EditText
             android:layout_width="match_parent"
@@ -51,7 +52,7 @@
         android:layout_height="89dp"
         android:text="@string/Helpme"
         android:id="@+id/btnHelpme"
-        android:background="#efc9c9"
+        android:background="#96dbccdb"
         android:onClick="onClick"
         android:layout_gravity="center_vertical"
         android:layout_below="@+id/etFreeText"
@@ -72,13 +73,13 @@
         android:text="Back"
         android:id="@+id/btnBack"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:background="#dbccdb" />
 
     <TextClock
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etClock"
-        android:layout_alignTop="@+id/btnHelpme"
-        android:layout_alignStart="@+id/btnBack" />
+        android:layout_alignTop="@+id/btnHelpme" />
 
 </RelativeLayout>

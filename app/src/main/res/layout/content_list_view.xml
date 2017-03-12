@@ -11,7 +11,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ShowTasksActivity"
     tools:showIn="@layout/activity_list_view"
-    android:background="#ebd8d8">
+    android:background="#feffff">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ibSearch"
             android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_search" />
+            android:src="@android:drawable/ic_menu_search"
+            android:background="#dbccdb" />
 
         <EditText
             android:layout_width="wrap_content"
