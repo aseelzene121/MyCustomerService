@@ -18,7 +18,7 @@
         android:weightSum="1"
         android:baselineAligned="false"
         android:orientation="vertical"
-        android:background="#ffffff">
+        android:background="#f0f1ec">
 
         <Button
             android:layout_width="307dp"

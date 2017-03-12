@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
 
         android:ems="10"
-        android:id="@+id/etZoneCode"
-        android:hint="ZoneCode" />
+        android:id="@+id/etName"
+        android:hint="Name" />
 
     <TextView
         android:layout_width="match_parent"
@@ -18,7 +18,6 @@
 
         android:ems="10"
         android:id="@+id/etFreeText"
-        android:layout_gravity="right"
         android:hint="FreeText" />
 
     <TextView
@@ -26,9 +25,8 @@
         android:layout_height="wrap_content"
 
         android:ems="10"
-        android:id="@+id/etName"
-        android:layout_gravity="center_horizontal"
-        android:hint="Name" />
+        android:id="@+id/etZoneCode"
+        android:hint="ZoneCode" />
 
     <TextClock
         android:layout_width="wrap_content"
@@ -64,10 +62,10 @@
     </RadioGroup>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff">
+        android:background="#ffffff"
+        android:baselineAligned="false">
 
         <Button
             android:layout_width="match_parent"
