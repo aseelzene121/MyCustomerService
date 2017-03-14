@@ -14,8 +14,10 @@ public class Request {
     public final static String wait="wait";
     public final static String onMyWay="onMyWay";
     public final static String done="done";
+    public final static String deleted="deleted";
 
-   ;
+
+    ;
     private String status;
     private String name;
     private String zoneCode;

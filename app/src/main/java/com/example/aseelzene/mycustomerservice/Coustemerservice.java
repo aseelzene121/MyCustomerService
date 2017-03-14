@@ -128,6 +128,7 @@ public class Coustemerservice extends AppCompatActivity {
                         SharedPreferences.Editor editor=sharedPreferences.edit();
                                       //"key" the ame of the value
                         editor.putString("key",databaseReference.getKey());
+                        getRequest(databaseReference.getKey());
                         editor.commit();
 
                         // finish();// finish an exit this activity
@@ -150,7 +151,7 @@ public class Coustemerservice extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 Request request = dataSnapshot.getValue(Request.class);
-               tvStatus.append(request.getStatus());
+               tvStatus.append(request.getStatus()+Calendar.getInstance().getTime()+"\n");
 
 //                for (DataSnapshot ds : dataSnapshot.getChildren()) {
 //                    Request request = ds.getValue(Request.class);

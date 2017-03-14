@@ -69,7 +69,7 @@ public class ShowTasksActivity extends AppCompatActivity {
     }
 
     private void initListView() {
-        String email = FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.', '_');
+        //String email = FirebaseAuth.getInstance().getCurrentUser().getEmail().replace('.', '_');
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
         reference.child("zone").addValueEventListener(new ValueEventListener() {
             @Override
@@ -77,7 +77,7 @@ public class ShowTasksActivity extends AppCompatActivity {
                 adapter.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                  Request request = ds.getValue(Request.class);
-                    request.setId(reference.getKey());
+                    request.setId(ds.getKey());
                    adapter.add(request);
                 }
             }

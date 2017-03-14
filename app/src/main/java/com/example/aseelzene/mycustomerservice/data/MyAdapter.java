@@ -29,9 +29,10 @@ public class MyAdapter extends android.widget.ArrayAdapter {
     private DatabaseReference reference;
     public MyAdapter(Context context, int resource) {
         super(context, resource);
-       String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-        email = email.replace(".", "_");
-        reference = FirebaseDatabase.getInstance().getReference(email).child("Request");
+//       String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+//        email = email.replace(".", "_");
+//        reference = FirebaseDatabase.getInstance().getReference(email).child("Request");
+          reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_")).child("zone");
     }
 
     @Override
@@ -40,7 +41,7 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         RadioButton rdOnMyWay = (RadioButton) convertView.findViewById(R.id.rdOnMyWay);
         RadioButton rdWait = (RadioButton) convertView.findViewById(R.id.rdWait);
         RadioButton rdDone = (RadioButton) convertView.findViewById(R.id.rdDone);
-        Button btnSave=(Button) convertView.findViewById(R.id.btnSave);
+        Button btnDel=(Button) convertView.findViewById(R.id.btnDel);
         TextView etZoneCode =(TextView) convertView.findViewById(R.id.etZoneCode);
         TextView etName =(TextView) convertView.findViewById(R.id.etName);
         TextView  Clock =(TextView)  convertView.findViewById(R.id.Clock);
@@ -50,41 +51,95 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         etName.setText(request.getName());
         etZoneCode.setText(request.getZoneCode());
 
-        btnSave.setOnClickListener(new View.OnClickListener()
+        btnDel.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
-                reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
+                request.setStatus(Request.deleted);
+                reference.child(request.getId()).setValue(request,new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                         if (databaseError == null) //**deleted
                         {
-                            Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getContext(), "onMyWay", Toast.LENGTH_LONG).show();
                             // **delete from this adapter
-                            remove(request);
+//                            remove(request);
                             setNotifyOnChange(true);//**to update the list
                         }
                     }
                 });
+//                reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
+//                    @Override
+//                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+//                        if (databaseError == null) //**deleted
+//                        {
+//                            Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
+//                            // **delete from this adapter
+//
+//                            remove(request);
+//                            setNotifyOnChange(true);//**to update the list
+//                        }
+//                    }
+//                });
+
 
             }
         });
         rdOnMyWay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
+               // Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
+                request.setStatus(Request.onMyWay);
+                reference.child(request.getId()).setValue(request,new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                        if (databaseError == null) //**deleted
+                        {
+                            Toast.makeText(getContext(), "onMyWay", Toast.LENGTH_LONG).show();
+                            // **delete from this adapter
+//                            remove(request);
+                            setNotifyOnChange(true);//**to update the list
+                        }
+                    }
+                });
             }
         });
         rdDone.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show();
+                request.setStatus(Request.done);
+                reference.child(request.getId()).setValue(request,new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                        if (databaseError == null) //**deleted
+                        {
+                            Toast.makeText(getContext(), "done", Toast.LENGTH_LONG).show();
+                            // **delete from this adapter
+//                            remove(request);
+                            setNotifyOnChange(true);//**to update the list
+                        }
+                    }
+                });
             }
         });
         rdWait.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 Toast.makeText(getContext(),"Wait",Toast.LENGTH_LONG).show();
+                request.setStatus(Request.wait);
+                reference.child(request.getId()).setValue(request,new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                        if (databaseError == null) //**deleted
+                        {
+                            Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
+                            // **delete from this adapter
+                            //remove(request);
+                            setNotifyOnChange(true);//**to update the list
+                        }
+                    }
+                });
             }
         });
 
