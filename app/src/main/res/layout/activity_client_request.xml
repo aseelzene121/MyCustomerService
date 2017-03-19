@@ -29,7 +29,9 @@
                 android:text="@string/Server"
                 android:id="@+id/btnServer"
                 android:background="#d8ebdb"
-                android:layout_weight="0.51" />
+                android:layout_weight="0.51"
+                android:textSize="25dp"
+                android:textStyle="italic" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -37,7 +39,9 @@
                 android:text="@string/Customer"
                 android:id="@+id/btnCustomer"
                 android:background="#ebd8d8"
-                android:layout_weight="0.62" />
+                android:layout_weight="0.62"
+                android:textSize="25dp"
+                android:textStyle="italic" />
         </LinearLayout>
 
         <EditText
@@ -46,7 +50,9 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/etEmail"
-            android:hint="Email" />
+            android:hint="Email"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
@@ -54,7 +60,9 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassw"
-            android:hint="password" />
+            android:hint="password"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,14 +75,18 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Signin"
                 android:id="@+id/btnSignIn"
-                android:background="#d8ebdb" />
+                android:background="#d8ebdb"
+                android:textSize="25dp"
+                android:textStyle="italic" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Signup"
                 android:id="@+id/btnSignUp"
-                android:background="#fbeee5" />
+                android:background="#fbeee5"
+                android:textSize="25dp"
+                android:textStyle="italic" />
 
             <LinearLayout
                 android:orientation="vertical"

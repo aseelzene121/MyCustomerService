@@ -10,7 +10,8 @@
 
         android:ems="10"
         android:id="@+id/etName"
-        android:hint="Name" />
+        android:hint="Name"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -18,7 +19,8 @@
 
         android:ems="10"
         android:id="@+id/etFreeText"
-        android:hint="FreeText" />
+        android:hint="FreeText"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -26,7 +28,8 @@
 
         android:ems="10"
         android:id="@+id/etZoneCode"
-        android:hint="ZoneCode" />
+        android:hint="ZoneCode"
+        android:textSize="15dp" />
 
     <TextClock
         android:layout_width="wrap_content"
@@ -44,21 +47,24 @@
             android:layout_height="wrap_content"
             android:text="On My Way"
             android:id="@+id/rdOnMyWay"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="25dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Wait"
             android:id="@+id/rdWait"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="25dp" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Done"
             android:id="@+id/rdDone"
-            android:checked="false" />
+            android:checked="false"
+            android:textSize="25dp" />
     </RadioGroup>
 
     <LinearLayout
@@ -72,7 +78,9 @@
             android:layout_height="wrap_content"
             android:text="@string/Delete"
             android:id="@+id/btnDel"
-            android:background="#ebd8d8" />
+            android:background="#ebd8d8"
+            android:textStyle="bold"
+            android:textSize="20dp" />
 
     </LinearLayout>
 </LinearLayout>

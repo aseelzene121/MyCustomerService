@@ -25,7 +25,9 @@
             android:id="@+id/etEmail"
             android:hint="Email"
             android:background="#d8ebdb"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:textStyle="italic" />
 
         <EditText
             android:layout_width="match_parent"
@@ -35,7 +37,9 @@
             android:id="@+id/etFullName"
             android:hint="Name"
             android:background="#ebd8d8"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:textStyle="italic" />
 
         <EditText
             android:layout_width="match_parent"
@@ -45,7 +49,9 @@
             android:id="@+id/etPassword"
             android:hint="Password"
             android:background="#d8ebdb"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:textStyle="bold|italic" />
 
         <EditText
             android:layout_width="match_parent"
@@ -55,7 +61,9 @@
             android:id="@+id/etConfirmPassword"
             android:hint="RePassword"
             android:background="#ebd8d8"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:textStyle="bold|italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +81,9 @@
             android:id="@+id/btnSave"
             android:background="#d8ebdb"
             android:layout_gravity="right"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="25dp" />
 
     </LinearLayout>
 </RelativeLayout>

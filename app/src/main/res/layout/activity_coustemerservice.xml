@@ -26,7 +26,9 @@
             android:id="@+id/etName"
             android:hint="Name"
             android:background="#d8ebdb"
-            android:autoText="false" />
+            android:autoText="false"
+            android:textColorHighlight="#f5e7e7"
+            android:textSize="25dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -35,7 +37,8 @@
             android:ems="10"
             android:id="@+id/etZoneCode"
             android:hint="Zone Code"
-            android:background="#d8ebdb" />
+            android:background="#d8ebdb"
+            android:textSize="25dp" />
 
     </LinearLayout>
 
@@ -57,7 +60,10 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="38dp"
         android:layout_below="@+id/etClock"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#f33939"
+        android:textStyle="bold|italic"
+        android:textSize="25dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -65,13 +71,15 @@
         android:id="@+id/etFreeText"
         android:layout_below="@+id/linearLayout"
         android:layout_alignParentStart="true"
-        android:hint="Free Text" />
+        android:hint="Free Text"
+        android:textStyle="bold" />
 
     <TextClock
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etClock"
         android:layout_below="@+id/etFreeText"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
 
 </RelativeLayout>
