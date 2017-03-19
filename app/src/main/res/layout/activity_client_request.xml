@@ -13,36 +13,40 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:weightSum="1"
-        android:baselineAligned="false"
-        android:orientation="vertical"
-        android:background="#f0f1ec">
+        android:orientation="vertical">
 
-        <Button
-            android:layout_width="307dp"
-            android:layout_height="130dp"
-            android:text="@string/Customer"
-            android:id="@+id/btnCustomer"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#0c0d0c"
-            android:background="#d8ebdb" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:weightSum="1"
+            android:layout_weight="0.06">
 
-        <Button
-            android:layout_width="307dp"
-            android:layout_height="134dp"
-            android:text="@string/Server"
-            android:id="@+id/btnServer"
-            android:background="#ebd8d8"
-            android:layout_gravity="center_horizontal" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="81dp"
+                android:text="@string/Server"
+                android:id="@+id/btnServer"
+                android:background="#d8ebdb"
+                android:layout_weight="0.51" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="89dp"
+                android:text="@string/Customer"
+                android:id="@+id/btnCustomer"
+                android:background="#ebd8d8"
+                android:layout_weight="0.62" />
+        </LinearLayout>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
             android:id="@+id/etEmail"
-            android:hint="Email"
-            android:background="#d8ebdb" />
+            android:hint="Email" />
 
         <EditText
             android:layout_width="match_parent"
@@ -50,33 +54,33 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassw"
-            android:hint="Password"
-            android:background="#ebd8d8"
-            android:autoText="false" />
+            android:hint="password" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="95dp"
+            android:weightSum="1"
             android:background="#ffffff">
 
             <Button
-                android:layout_width="0dp"
+                android:layout_width="172dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Signin"
-                android:id="@+id/btnSignin"
-                android:background="#ebd8d8"
-                android:layout_weight="1" />
+                android:id="@+id/btnSignIn"
+                android:background="#d8ebdb" />
 
             <Button
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="@string/Signup"
                 android:id="@+id/btnSignUp"
-                android:background="#d8ebdb"
-                android:layout_weight="1" />
+                android:background="#fbeee5" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-
 </RelativeLayout>
