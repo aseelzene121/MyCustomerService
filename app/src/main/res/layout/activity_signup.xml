@@ -64,15 +64,6 @@
             android:layout_weight="1"
             android:background="#ffffff">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/etZoneCode"
-                android:hint="Zone Code"
-                android:autoText="false"
-                android:background="#d8ebdb" />
         </LinearLayout>
 
         <Button
