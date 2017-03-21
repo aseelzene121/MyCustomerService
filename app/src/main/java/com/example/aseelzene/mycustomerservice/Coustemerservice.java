@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,14 +34,15 @@ public class Coustemerservice extends AppCompatActivity {
     private EditText etName;
     private EditText etTime;
     private Button btnBack;
+    private ImageButton imageButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);//super: extend
         setContentView(R.layout.activity_coustemerservice);
         etName = (EditText) (findViewById(R.id.etName));
+        imageButton2=(ImageButton)(findViewById(R.id.imageButton2));
         etFreeText = (EditText) (findViewById(R.id.etFreeText));
-        btnHelpme = (Button) (findViewById(R.id.btnHelpme));
         etZoneCode = (TextView) findViewById(R.id.etZoneCode);
         etTime = (EditText) findViewById(R.id.etName);
         tvStatus=(TextView)findViewById(R.id.tvStatus);
@@ -58,16 +60,17 @@ public class Coustemerservice extends AppCompatActivity {
     }
 
 
+
     private void eventHandler() {//**mo3aljt al7dth
-        btnHelpme.setOnClickListener(new View.OnClickListener() {
+        imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                dataHandler();
-
+            public void onClick(View view) {
             }
-
         });
+
     }
+
+
 
     private void dataHandler() {//**mo3aljt al info west5rajha wf7siha
         //getting data
