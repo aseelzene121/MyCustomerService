@@ -74,7 +74,7 @@
                 android:layout_width="172dp"
                 android:layout_height="wrap_content"
                 android:text="@string/Signin"
-                android:id="@+id/btnSignIn"
+                android:id="@+id/btnSignin"
                 android:background="#d8ebdb"
                 android:textSize="25dp"
                 android:textStyle="italic" />

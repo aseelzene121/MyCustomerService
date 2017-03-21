@@ -28,7 +28,8 @@
             android:background="#d8ebdb"
             android:autoText="false"
             android:textColorHighlight="#f5e7e7"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColorHint="#052a66" />
 
         <EditText
             android:layout_width="match_parent"
@@ -38,7 +39,8 @@
             android:id="@+id/etZoneCode"
             android:hint="Zone Code"
             android:background="#d8ebdb"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:textColorHint="#052a66" />
 
     </LinearLayout>
 
@@ -48,7 +50,7 @@
         android:ems="10"
         android:id="@+id/tvStatus"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/btnHelpme" />
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,10 +62,10 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="38dp"
         android:layout_below="@+id/etClock"
-        android:layout_centerHorizontal="true"
         android:textColor="#f33939"
         android:textStyle="bold|italic"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/tvStatus" />
 
     <EditText
         android:layout_width="match_parent"
@@ -72,7 +74,8 @@
         android:layout_below="@+id/linearLayout"
         android:layout_alignParentStart="true"
         android:hint="Free Text"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColorHint="#052a66" />
 
     <TextClock
         android:layout_width="wrap_content"

@@ -43,7 +43,6 @@ public class Coustemerservice extends AppCompatActivity {
         btnHelpme = (Button) (findViewById(R.id.btnHelpme));
         etZoneCode = (TextView) findViewById(R.id.etZoneCode);
         etTime = (EditText) findViewById(R.id.etName);
-        btnBack =(Button) findViewById(R.id.btnBack);
         tvStatus=(TextView)findViewById(R.id.tvStatus);
         eventHandler();
         auth = FirebaseAuth.getInstance();
@@ -66,16 +65,7 @@ public class Coustemerservice extends AppCompatActivity {
                 dataHandler();
 
             }
-            {
-                btnBack.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent i;
-                        i=new Intent(Coustemerservice.this,ClientRequest.class);
-                        startActivity(i);
-                    }
-                });
-            }
+
         });
     }
 
