@@ -33,7 +33,6 @@ public class ShowTasksActivity extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); //"horasha"
@@ -50,7 +49,6 @@ public class ShowTasksActivity extends AppCompatActivity {
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +59,7 @@ public class ShowTasksActivity extends AppCompatActivity {
         });
 
     }
+    
 
     @Override
     protected void onStart() {
@@ -86,9 +85,16 @@ public class ShowTasksActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
+
         });
+
+        }
     }
-  }
+
+
+
+
+
 
 
 

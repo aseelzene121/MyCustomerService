@@ -141,7 +141,7 @@ public class Coustemerservice extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 Request request = dataSnapshot.getValue(Request.class);
-               tvStatus.append(request.getStatus()+Calendar.getInstance().getTime()+"\n");
+                tvStatus.append(request.getStatus()+Calendar.getInstance().getTime()+"\n");
                 if(request.getStatus().equals(Request.deleted))
                 {
                                     reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
@@ -151,7 +151,7 @@ public class Coustemerservice extends AppCompatActivity {
                         {
                             Toast.makeText(getBaseContext(), "Deleted", Toast.LENGTH_LONG).show();
                             // **delete from this adapter
-//save key at local storage                               //file name
+                             //save key at local storage                               //file name
                             SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
                             //to save  value to the file
                             SharedPreferences.Editor editor=sharedPreferences.edit();
