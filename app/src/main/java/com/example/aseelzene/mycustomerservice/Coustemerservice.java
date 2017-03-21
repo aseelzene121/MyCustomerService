@@ -112,16 +112,16 @@ public class Coustemerservice extends AppCompatActivity {
                     if (databaseError == null) {
                         Toast.makeText(getBaseContext(), "save ok" + databaseReference.getKey(), Toast.LENGTH_LONG).show();
 
-                        //save key at local storage                               //file name
+                        //**save key at local storage                               //**file name
                         SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
                         //to save  value to the file
                         SharedPreferences.Editor editor=sharedPreferences.edit();
-                                      //"key" the ame of the value
+                                      //**"key" the ame of the value
                         editor.putString("key",databaseReference.getKey());
                         getRequest(databaseReference.getKey());
                         editor.commit();
 
-                        // finish();// finish an exit this activity
+                        //** finish();// finish an exit this activity
 
                     } else {
                         Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
