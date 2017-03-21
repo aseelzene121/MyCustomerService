@@ -25,23 +25,23 @@
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="81dp"
+                android:layout_height="96dp"
                 android:text="@string/Server"
                 android:id="@+id/btnServer"
                 android:background="#d8ebdb"
-                android:layout_weight="0.51"
+                android:layout_weight="0.96"
                 android:textSize="25dp"
                 android:textStyle="italic" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="89dp"
+                android:layout_width="192dp"
+                android:layout_height="93dp"
                 android:text="@string/Customer"
                 android:id="@+id/btnCustomer"
                 android:background="#ebd8d8"
-                android:layout_weight="0.62"
                 android:textSize="25dp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:layout_weight="0.32" />
         </LinearLayout>
 
         <EditText
@@ -77,7 +77,8 @@
                 android:id="@+id/btnSignin"
                 android:background="#d8ebdb"
                 android:textSize="25dp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:textColorHint="#000000" />
 
             <Button
                 android:layout_width="match_parent"
@@ -88,10 +89,6 @@
                 android:textSize="25dp"
                 android:textStyle="italic" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

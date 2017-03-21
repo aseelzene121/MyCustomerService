@@ -49,7 +49,7 @@
             android:id="@+id/rdOnMyWay"
             android:checked="false"
             android:textSize="25dp"
-            android:textColor="#052a66" />
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
             android:id="@+id/rdWait"
             android:checked="false"
             android:textSize="25dp"
-            android:textColor="#052a66" />
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             android:id="@+id/rdDone"
             android:checked="false"
             android:textSize="25dp"
-            android:textColor="#052a66" />
+            android:textColor="#000000" />
     </RadioGroup>
 
     <LinearLayout
