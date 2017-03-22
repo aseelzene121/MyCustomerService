@@ -142,12 +142,12 @@ public class Coustemerservice extends AppCompatActivity {
         reference.child("zone").child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
                 Request request = dataSnapshot.getValue(Request.class);
                 tvStatus.append(request.getStatus()+Calendar.getInstance().getTime()+"\n");
                 if(request.getStatus().equals(Request.deleted))
                 {
-                                    reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
+                    reference.child(request.getId()).removeValue(new DatabaseReference.CompletionListener() {
+
                     @Override
                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                         if (databaseError == null) //**deleted
