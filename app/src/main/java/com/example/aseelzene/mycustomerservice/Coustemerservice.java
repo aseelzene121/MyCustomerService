@@ -34,14 +34,14 @@ public class Coustemerservice extends AppCompatActivity {
     private EditText etName;
     private EditText etTime;
     private Button btnBack;
-    private ImageButton imageButton2;
+    private ImageButton btnhelpme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);//super: extend
         setContentView(R.layout.activity_coustemerservice);
         etName = (EditText) (findViewById(R.id.etName));
-        imageButton2=(ImageButton)(findViewById(R.id.imageButton2));
+        btnhelpme=(ImageButton)(findViewById(R.id.btnhelpme));
         etFreeText = (EditText) (findViewById(R.id.etFreeText));
         etZoneCode = (TextView) findViewById(R.id.etZoneCode);
         etTime = (EditText) findViewById(R.id.etName);
@@ -62,14 +62,13 @@ public class Coustemerservice extends AppCompatActivity {
 
 
     private void eventHandler() {//**mo3aljt al7dth
-        imageButton2.setOnClickListener(new View.OnClickListener() {
+        btnhelpme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dataHandler();
             }
         });
-
     }
-
 
 
     private void dataHandler() {//**mo3aljt al info west5rajha wf7siha
