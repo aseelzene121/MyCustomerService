@@ -112,7 +112,7 @@ public class Coustemerservice extends AppCompatActivity {
                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
 
                     if (databaseError == null) {
-                        Toast.makeText(getBaseContext(), "save ok" + databaseReference.getKey(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), "save ok" + databaseReference.getKey(), Toast.LENGTH_LONG).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
 
                         //**save key at local storage                               //**file name
                         SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
@@ -126,6 +126,7 @@ public class Coustemerservice extends AppCompatActivity {
                         //** finish();// finish an exit this activity
 
                     } else {
+                         //**Toast:A toast provides simple feedback about an operation in a small popup
                         Toast.makeText(getBaseContext(), "save Err" + databaseError.getMessage(), Toast.LENGTH_LONG).show();
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
                         //reference.setValue;}

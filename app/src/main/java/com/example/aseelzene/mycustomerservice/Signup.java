@@ -83,7 +83,7 @@ public class Signup extends AppCompatActivity {
             {
                 //user is signed in
 
-                Toast.makeText(Signup.this, "user is signed in.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signup.this, "user is signed in.", Toast.LENGTH_SHORT).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
 
 
             } else
@@ -91,7 +91,7 @@ public class Signup extends AppCompatActivity {
             {
                 //user signed out
 
-                Toast.makeText(Signup.this, "user signed out.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signup.this, "user signed out.", Toast.LENGTH_SHORT).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
             }
         }
     };
@@ -132,7 +132,7 @@ public class Signup extends AppCompatActivity {
 
                 {
 
-                    Toast.makeText(Signup.this, "Authentication Successful.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Signup.this, "Authentication Successful.", Toast.LENGTH_SHORT).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
                     Intent i = new Intent(Signup.this, ClientRequest.class);
                     startActivity(i);
 
@@ -144,7 +144,7 @@ public class Signup extends AppCompatActivity {
 
                 {
                     Toast.makeText(Signup.this, "Authentication failed." + task.getException().getMessage(),
-                            Toast.LENGTH_SHORT).show();
+                            Toast.LENGTH_SHORT).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
 
                     task.getException().printStackTrace();
                 }

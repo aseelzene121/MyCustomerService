@@ -49,7 +49,7 @@ public class ClientRequest extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();//**msn
+                            Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();// //**Toast:A toast provides simple feedback about an operation in a small popup
                             Intent i = new Intent(ClientRequest.this, Coustemerservice.class);
                             startActivity(i);
                             finish();// finish an exit this activity
@@ -113,7 +113,7 @@ public class ClientRequest extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();// **MSN
+                    Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();//  //**Toast:A toast provides simple feedback about an operation in a small popup
                     Intent i;
                     i=new Intent(ClientRequest.this,ShowTasksActivity.class);
                     startActivity(i);

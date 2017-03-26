@@ -11,7 +11,7 @@
         android:ems="10"
         android:id="@+id/etName"
         android:hint="Name"
-        android:textSize="15dp" />
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:ems="10"
         android:id="@+id/etFreeText"
         android:hint="FreeText"
-        android:textSize="15dp" />
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -29,13 +29,14 @@
         android:ems="10"
         android:id="@+id/etZoneCode"
         android:hint="ZoneCode"
-        android:textSize="15dp" />
+        android:textSize="20dp" />
 
     <TextClock
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textClock"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:textSize="15dp" />
 
     <RadioGroup
         android:layout_width="wrap_content"
