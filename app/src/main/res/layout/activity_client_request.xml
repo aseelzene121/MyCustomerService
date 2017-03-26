@@ -24,6 +24,15 @@
             android:layout_weight="0.06">
 
             <Button
+                android:layout_width="162dp"
+                android:layout_height="93dp"
+                android:text="@string/Customer"
+                android:id="@+id/btnCustomer"
+                android:background="#ebd8d8"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="96dp"
                 android:text="@string/Server"
@@ -33,15 +42,6 @@
                 android:textSize="25dp"
                 android:textStyle="italic" />
 
-            <Button
-                android:layout_width="192dp"
-                android:layout_height="93dp"
-                android:text="@string/Customer"
-                android:id="@+id/btnCustomer"
-                android:background="#ebd8d8"
-                android:textSize="25dp"
-                android:textStyle="italic"
-                android:layout_weight="0.32" />
         </LinearLayout>
 
         <EditText
