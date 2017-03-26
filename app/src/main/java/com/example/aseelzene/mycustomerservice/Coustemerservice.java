@@ -166,11 +166,7 @@ public class Coustemerservice extends AppCompatActivity {
                     }
                 });
                 }
-//                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-//                    Request request = ds.getValue(Request.class);
-//                    request.setId(reference.getKey());
-//
-//                }
+
             }
 
             @Override

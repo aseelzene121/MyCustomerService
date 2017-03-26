@@ -29,9 +29,6 @@ public class MyAdapter extends android.widget.ArrayAdapter {
     private DatabaseReference reference;
     public MyAdapter(Context context, int resource) {
         super(context, resource);
-//       String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-//        email = email.replace(".", "_");
-//        reference = FirebaseDatabase.getInstance().getReference(email).child("Request");
           reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_")).child("zone");
     }
 
@@ -88,7 +85,6 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         rdOnMyWay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Toast.makeText(getContext(), "Wait", Toast.LENGTH_LONG).show();
                 request.setStatus(Request.onMyWay);
                 reference.child(request.getId()).setValue(request,new DatabaseReference.CompletionListener() {
                     @Override
