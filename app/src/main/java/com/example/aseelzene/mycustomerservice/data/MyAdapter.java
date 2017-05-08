@@ -103,16 +103,17 @@ public class MyAdapter extends android.widget.ArrayAdapter {
         rdDone.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
                 request.setStatus(Request.done);
                 reference.child(request.getId()).setValue(request,new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                         if (databaseError == null) //**deleted
                         {
-                            Toast.makeText(getContext(), "done", Toast.LENGTH_LONG).show();
+//                            Toast.makeText(getContext(), "done", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getContext(), "Deleted", Toast.LENGTH_LONG).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
+
                             // **delete from this adapter
-//                            remove(request);
+                            remove(request);
                             setNotifyOnChange(true);//**to update the list
                         }
                     }

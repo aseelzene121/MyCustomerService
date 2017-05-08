@@ -49,6 +49,13 @@ public class ShowTasksActivity extends AppCompatActivity {
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);
 
+        ibSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String zone=etSearch.getText().toString();
+                initListView(zone);
+            }
+        });
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,29 +71,50 @@ public class ShowTasksActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        initListView();
+        initListView("");
     }
 
-    private void initListView() {
+    private void initListView(String zone) {
+
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
-        reference.child("zone").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                adapter.clear();
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                 Request request = ds.getValue(Request.class);
-                    request.setId(ds.getKey());
-                   adapter.add(request);
+        if (zone.length()>0) {
+            reference.child("zone").orderByChild("zoneCode").equalTo(zone).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    adapter.clear();
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        Request request = ds.getValue(Request.class);
+                        request.setId(ds.getKey());
+                        adapter.add(request);
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
+                }
+            });
+        }
+        else {
 
-        });
+            reference.child("zone").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    adapter.clear();
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        Request request = ds.getValue(Request.class);
+                        request.setId(ds.getKey());
+                        adapter.add(request);
+                    }
+                }
 
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+
+            });
+        }
         }
     }
 
