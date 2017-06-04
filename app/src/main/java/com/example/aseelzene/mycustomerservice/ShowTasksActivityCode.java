@@ -49,7 +49,7 @@ public class ShowTasksActivityCode extends AppCompatActivity {
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);
 
-        ibSearch.setOnClickListener(new View.OnClickListener() {
+        ibSearch.setOnClickListener(new View.OnClickListener() { //
             @Override
             public void onClick(View view) {
                 String zone=etSearch.getText().toString();
@@ -77,12 +77,14 @@ public class ShowTasksActivityCode extends AppCompatActivity {
     private void initListView(String zone) {
                                                //**save info on firebase
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
-        if (zone.length()>0) {
+        if (zone.length()>0) {        //**order by child :al7ql almourad b7thho
             reference.child("zone").orderByChild("zoneCode").equalTo(zone).addValueEventListener(new ValueEventListener() { //**alf7s
-                @Override
+                @Override                                    //  **equal to: y7dd al7ql almourad b7thho
+
+                                                    //** data snapshot: results
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                    adapter.clear();
-                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    adapter.clear(); //**clean
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) { //**ymor 3la kol nata2j alb7th
                         Request request = ds.getValue(Request.class);
                         request.setId(ds.getKey());
                         //**save on firebase
