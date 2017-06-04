@@ -115,7 +115,7 @@ public class ClientRequest extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();//  //**Toast:A toast provides simple feedback about an operation in a small popup
                     Intent i;
-                    i=new Intent(ClientRequest.this,ShowTasksActivity.class);
+                    i=new Intent(ClientRequest.this,ShowTasksActivityCode.class);
                     startActivity(i);
                     finish();//** finish an exit this activity
 
