@@ -27,7 +27,7 @@ public class ClientRequest extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);//extend
+        super.onCreate(savedInstanceState);//**extend
         setContentView(R.layout.activity_client_request);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassw = (EditText) findViewById(R.id.etPassw);
@@ -52,7 +52,7 @@ public class ClientRequest extends AppCompatActivity {
                             Toast.makeText(ClientRequest.this, "signIn Successful", Toast.LENGTH_SHORT).show();// //**Toast:A toast provides simple feedback about an operation in a small popup
                             Intent i = new Intent(ClientRequest.this, Coustemerservice.class);
                             startActivity(i);
-                            finish();// finish an exit this activity
+                            finish();//** finish an exit this activity
 
                         } else {
                             Toast.makeText(ClientRequest.this, "signIn faild" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

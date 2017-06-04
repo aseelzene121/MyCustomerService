@@ -35,7 +35,7 @@ public class ShowTasksActivityCode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); //"horasha"
+        super.onCreate(savedInstanceState); //**"horasha"
         setContentView(R.layout.activity_list_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,7 +49,7 @@ public class ShowTasksActivityCode extends AppCompatActivity {
         lvTasks =(ListView) findViewById(R.id.lvTasks);
         lvTasks.setAdapter(adapter);
 
-        ibSearch.setOnClickListener(new View.OnClickListener() { //
+        ibSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String zone=etSearch.getText().toString();

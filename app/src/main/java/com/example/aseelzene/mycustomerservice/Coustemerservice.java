@@ -38,7 +38,7 @@ public class Coustemerservice extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);//super: extend
+        super.onCreate(savedInstanceState);//**super: extend
         setContentView(R.layout.activity_coustemerservice);
         etName = (EditText) (findViewById(R.id.etName));
         btnhelpme=(ImageButton)(findViewById(R.id.btnhelpme));
@@ -48,11 +48,11 @@ public class Coustemerservice extends AppCompatActivity {
         tvStatus=(TextView)findViewById(R.id.tvStatus);
         eventHandler();
         auth = FirebaseAuth.getInstance();
-        //to check if the customer have saed request
-        //to read from the saved file
+        //**to check if the customer have saed request
+        //**to read from the saved file
         SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
         String key=sharedPreferences.getString("key",null);
-        if(key!=null)//i have a saved key
+        if(key!=null)//**i have a saved key
         {
             getRequest(key);
         }
@@ -61,7 +61,7 @@ public class Coustemerservice extends AppCompatActivity {
 
 
 
-    private void eventHandler() {////rdet f3il
+    private void eventHandler() {//**rdet f3il
         btnhelpme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,14 +72,14 @@ public class Coustemerservice extends AppCompatActivity {
 
 
     private void dataHandler() {//**mo3aljt al info west5rajha wf7siha
-        //getting data
+        //**getting data
         String stFreeText = etFreeText.getText().toString();
         String stName = etName.getText().toString();
         String stZoneCode = etZoneCode.getText().toString();
         String stTime = etTime.getText().toString();
 
         boolean isOk = true;
-        //checking
+        //**checking
         if (stFreeText.length() == 0) {
             etFreeText.setError("wrong code");
             isOk = false;
@@ -97,15 +97,13 @@ public class Coustemerservice extends AppCompatActivity {
             request.setStatus(Request.wait);
             request.setCompleted(false);
             request.setFreeText(stFreeText);
-            request.setTime(Calendar.getInstance().getTime());//cuuren time
-            // request.setPriority(stPriority);
+            request.setTime(Calendar.getInstance().getTime());//**cuuren time
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-            //get current user email
+            //**get current user email
             String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
             email = email.replace(".", "_");
-            //all my task will be under my email under the root MyTasks
-            //child can not contain chars: $,#,.,...
-            // MyTask m = new MyTask();
+            //**all my task will be under my email under the root MyTasks
+            //**child can not contain chars: $,#,.,...
 
             reference.child(email).child("zone").push().setValue(request, new DatabaseReference.CompletionListener() {
                 @Override
@@ -116,7 +114,7 @@ public class Coustemerservice extends AppCompatActivity {
 
                         //**save key at local storage                               //**file name
                         SharedPreferences  sharedPreferences=getSharedPreferences("requestkey",MODE_PRIVATE);
-                        //to save  value to the file
+                        //**to save  value to the file
                         SharedPreferences.Editor editor=sharedPreferences.edit();
                                       //**"key" the ame of the value
                         editor.putString("key",databaseReference.getKey());
