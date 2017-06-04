@@ -40,7 +40,7 @@ public class ClientRequest extends AppCompatActivity {
 
     }
 
-    private void eventHandler() {//**mo3aljt alhdth
+    private void eventHandler() {//**rdt alf3il
         btnCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

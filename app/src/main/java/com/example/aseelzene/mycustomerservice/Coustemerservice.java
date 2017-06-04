@@ -61,7 +61,7 @@ public class Coustemerservice extends AppCompatActivity {
 
 
 
-    private void eventHandler() {//**mo3aljt al7dth
+    private void eventHandler() {////rdet f3il
         btnhelpme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

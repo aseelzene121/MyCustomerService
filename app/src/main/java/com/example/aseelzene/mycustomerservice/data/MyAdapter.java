@@ -26,13 +26,15 @@ import com.google.firebase.database.FirebaseDatabase;
  * Created by user on 11/29/2016.
  */
 public class MyAdapter extends android.widget.ArrayAdapter {
-    private DatabaseReference reference;
+    private DatabaseReference reference; //  adapter :mta2em ben firebasde & listview wybni wajeha lkl item
     public MyAdapter(Context context, int resource) {
         super(context, resource);
+                        //**ka3edt byanat fei alinternt
           reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_")).child("zone");
     }
 
     @Override
+          // **ybni wajeha lkl item
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_request, parent, false);
         RadioButton rdOnMyWay = (RadioButton) convertView.findViewById(R.id.rdOnMyWay);

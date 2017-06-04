@@ -75,16 +75,17 @@ public class ShowTasksActivity extends AppCompatActivity {
     }
 
     private void initListView(String zone) {
-
+                                               //**save info on firebase
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
         if (zone.length()>0) {
-            reference.child("zone").orderByChild("zoneCode").equalTo(zone).addValueEventListener(new ValueEventListener() {
+            reference.child("zone").orderByChild("zoneCode").equalTo(zone).addValueEventListener(new ValueEventListener() { //**alf7s
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     adapter.clear();
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
                         Request request = ds.getValue(Request.class);
                         request.setId(ds.getKey());
+                        //**save on firebase
                         adapter.add(request);
                     }
                 }
@@ -101,6 +102,7 @@ public class ShowTasksActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     adapter.clear();
+                             //**from firebase
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
                         Request request = ds.getValue(Request.class);
                         request.setId(ds.getKey());

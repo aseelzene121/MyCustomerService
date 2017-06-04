@@ -152,7 +152,7 @@ public class Signup extends AppCompatActivity {
         });
     }
 
-    public void eventHandler(){
+    public void eventHandler(){ //rdet f3il
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
