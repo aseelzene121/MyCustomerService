@@ -133,7 +133,7 @@ public class Signup extends AppCompatActivity {
                 {
 
                     Toast.makeText(Signup.this, "Authentication Successful.", Toast.LENGTH_SHORT).show(); //**Toast:A toast provides simple feedback about an operation in a small popup
-                    Intent i = new Intent(Signup.this, ClientRequest.class);
+                    Intent i = new Intent(Signup.this, ClientRequest1.class);
                     startActivity(i);
 
                     //updateUserProfile(task.getResult().getUser());
