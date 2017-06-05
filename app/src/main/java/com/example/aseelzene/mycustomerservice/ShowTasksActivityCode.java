@@ -73,7 +73,7 @@ public class ShowTasksActivityCode extends AppCompatActivity {
         super.onStart();
         initListView("");
     }
-
+                //**initlistview: tozher almo3tyat
     private void initListView(String zone) {
                                                //**save info on firebase
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("client@gmail.com".replace(".", "_"));
