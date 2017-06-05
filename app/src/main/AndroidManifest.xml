@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Signup" />
-        <activity android:name=".Coustemerservice" />
+        <activity android:name=".Custemerservice" />
         <activity
             android:name=".ShowTasksActivityCode"
             android:label="@string/title_activity_list_view"

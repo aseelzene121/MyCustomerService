@@ -30,7 +30,8 @@
                 android:id="@+id/btnCustomer"
                 android:background="#ebd8d8"
                 android:textSize="25dp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:layout_weight="0.13" />
 
             <Button
                 android:layout_width="wrap_content"

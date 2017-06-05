@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
-public class Coustemerservice extends AppCompatActivity {
+public class Custemerservice extends AppCompatActivity {
     private Button btnHelpme;
     private EditText etFreeText;
     private TextView tvStatus;

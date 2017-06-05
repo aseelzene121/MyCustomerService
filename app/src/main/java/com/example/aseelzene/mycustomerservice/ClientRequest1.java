@@ -50,7 +50,7 @@ public class ClientRequest1 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(ClientRequest1.this, "signIn Successful", Toast.LENGTH_SHORT).show();// //**Toast:A toast provides simple feedback about an operation in a small popup
-                            Intent i = new Intent(ClientRequest1.this, Coustemerservice.class);
+                            Intent i = new Intent(ClientRequest1.this, Custemerservice.class);
                             startActivity(i);
                             finish();//** finish an exit this activity
 
